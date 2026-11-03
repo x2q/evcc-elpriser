@@ -1,0 +1,14 @@
+{
+  "name": "evcc-elpriser",
+  "version": "0.1.0",
+  "private": true,
+  "description": "elpriser.org electricity prices as an evcc dynamic tariff (40 European price zones, forecast included)",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node scripts/build.mjs --check && node --test test/"
+  },
+  "engines": { "node": ">=18" },
+  "license": "MIT",
+  "repository": { "type": "git", "url": "git+https://github.com/x2q/evcc-elpriser.git" }
+}

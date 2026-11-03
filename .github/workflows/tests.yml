@@ -1,0 +1,47 @@
+name: Tests
+
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "0 5 * * 1"
+
+jobs:
+  jq:
+    name: jq program (recorded responses, daylight saving, live API)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: sudo apt-get install -y jq
+      - run: npm test
+      - name: Live API (zone list, current hour)
+        run: ELPRISER_LIVE=1 node --test test/live.test.js
+
+  evcc:
+    name: evcc template and examples
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: evcc-io/evcc
+          path: evcc
+          fetch-depth: 1
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: evcc/go.mod
+      - name: Add the template to evcc and run its template tests
+        run: |
+          cp upstream/templates/definition/tariff/elpriser.yaml evcc/templates/definition/tariff/
+          cd evcc
+          mkdir -p dist && echo ok > dist/index.html
+          go test ./tariff/ ./util/templates/...
+      - name: Build evcc and load every example with `evcc tariff`
+        run: |
+          cd evcc
+          go build -tags release -o ../evcc-bin .
+          cd ..
+          scripts/evcc-check.sh ./evcc-bin

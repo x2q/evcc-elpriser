@@ -1,0 +1,126 @@
+template: elpriser
+product:
+  identifier: elpriser-org-spot-prices-40-zones
+  brand: elpriser.org
+  description: Spot prices (40 zones)
+  group: Dynamischer Strompreis
+countries: ["EU", "DK"]
+requirements: ["skiptest"]
+description: |
+  Börsenstrompreise (Day-Ahead) von [elpriser.org](https://elpriser.org) für 40 europäische Preiszonen, inklusive Prognose bis zu 7-10 Tage (elpriser.org-eigenes statistisches Modell, keine offizielle Prognose). Kein Konto und kein API-Schlüssel nötig.
+  Außerhalb Dänemarks ist es der reine Börsenpreis ohne Steuern, Abgaben und Netzentgelte; diese lassen sich mit `charges`, `tax` oder `formula` ergänzen.
+  Für Dänemark (dk1, dk2) liefert die Schnittstelle auf Wunsch den vollen Endkundenpreis inklusive Netztarif des Netzbetreibers (mode `net_inkl_alt` und GLN-Nummer).
+  Die Preise sind in der Währung der Zone (DKK, SEK, NOK, PLN, GBP, ...); stelle die Währung in evcc entsprechend ein oder wähle EUR.
+
+render:
+  - default: |
+      type: template
+      template: elpriser
+      zone: de # Preiszone, Die Zonen der Schnittstelle: dk1 = Denmark - DK1 West (Jutland, Funen); dk2 = Denmark - DK2 East (Zealand, Bornholm); no1 = Norway - NO1 Oslo; no2 = Norway - NO2 Kristiansand; no3 = Norway - NO3 Trondheim; no4 = Norway - NO4 Tromsø; no5 = Norway - NO5 Bergen; se1 = Sweden - SE1 Luleå; se2 = Sweden - SE2 Sundsvall; se3 = Sweden - SE3 Stockholm; se4 = Sweden - SE4 Malmö; fi = Finland; nl = Netherlands; de = Germany and Luxembourg (DE-LU); fr = France; pl = Poland; it-n = Italy - North (IT-North); at = Austria; be = Belgium; ch = Switzerland; cz = Czechia; hu = Hungary; si = Slovenia; es = Spain; pt = Portugal; sk = Slovakia; gr = Greece; ro = Romania; bg = Bulgaria; hr = Croatia; rs = Serbia; ee = Estonia; lv = Latvia; lt = Lithuania; me = Montenegro; mk = North Macedonia; al = Albania; xk = Kosovo; gb = Great Britain (within-day market index, not day-ahead); ie = Ireland (all-island market). [dk1, dk2, no1, no2, no3, no4, no5, se1, se2, se3, se4, fi, nl, de, fr, pl, it-n, at, be, ch, cz, hu, si, es, pt, sk, gr, ro, bg, hr, rs, ee, lv, lt, me, mk, al, xk, gb, ie]
+      currency: local # Währung, `local` = Währung der Zone (DKK, SEK, NOK, PLN, ... mit dem EZB-Referenzkurs umgerechnet), `eur` = Euro. Muss zur Währung in evcc passen. Dänemark ist immer DKK, Großbritannien immer GBP. [local, eur]
+      pricemode: inkl_alt # Preisart (nur Dänemark), Nur für dk1 und dk2. `inkl_alt` = Spot + Energinet-Tarife + Elafgift + MwSt. (alles außer dem Netztarif des Netzbetreibers); `net_inkl_alt` = der volle Preis inkl. Netztarif, braucht `gln`; `spot_ex` / `spot_inkl` = Börsenpreis ohne / mit MwSt. [inkl_alt, spot_inkl, spot_ex, inkl_alt_minus, inkl_alt_elvarme, net_inkl_alt, net_inkl_alt_elvarme, net_inkl_tarif] (optional)
+      gln: 5790000705689 # GLN des Netzbetreibers (nur Dänemark), 13-stellige GLN-Nummer des dänischen Netzbetreibers, nur für die Preisarten net_*. Liste: elpriser.org/tariffer (optional)
+    advanced: |
+      type: template
+      template: elpriser
+      zone: de # Preiszone, Die Zonen der Schnittstelle: dk1 = Denmark - DK1 West (Jutland, Funen); dk2 = Denmark - DK2 East (Zealand, Bornholm); no1 = Norway - NO1 Oslo; no2 = Norway - NO2 Kristiansand; no3 = Norway - NO3 Trondheim; no4 = Norway - NO4 Tromsø; no5 = Norway - NO5 Bergen; se1 = Sweden - SE1 Luleå; se2 = Sweden - SE2 Sundsvall; se3 = Sweden - SE3 Stockholm; se4 = Sweden - SE4 Malmö; fi = Finland; nl = Netherlands; de = Germany and Luxembourg (DE-LU); fr = France; pl = Poland; it-n = Italy - North (IT-North); at = Austria; be = Belgium; ch = Switzerland; cz = Czechia; hu = Hungary; si = Slovenia; es = Spain; pt = Portugal; sk = Slovakia; gr = Greece; ro = Romania; bg = Bulgaria; hr = Croatia; rs = Serbia; ee = Estonia; lv = Latvia; lt = Lithuania; me = Montenegro; mk = North Macedonia; al = Albania; xk = Kosovo; gb = Great Britain (within-day market index, not day-ahead); ie = Ireland (all-island market). [dk1, dk2, no1, no2, no3, no4, no5, se1, se2, se3, se4, fi, nl, de, fr, pl, it-n, at, be, ch, cz, hu, si, es, pt, sk, gr, ro, bg, hr, rs, ee, lv, lt, me, mk, al, xk, gb, ie]
+      currency: local # Währung, `local` = Währung der Zone (DKK, SEK, NOK, PLN, ... mit dem EZB-Referenzkurs umgerechnet), `eur` = Euro. Muss zur Währung in evcc passen. Dänemark ist immer DKK, Großbritannien immer GBP. [local, eur]
+      pricemode: inkl_alt # Preisart (nur Dänemark), Nur für dk1 und dk2. `inkl_alt` = Spot + Energinet-Tarife + Elafgift + MwSt. (alles außer dem Netztarif des Netzbetreibers); `net_inkl_alt` = der volle Preis inkl. Netztarif, braucht `gln`; `spot_ex` / `spot_inkl` = Börsenpreis ohne / mit MwSt. [inkl_alt, spot_inkl, spot_ex, inkl_alt_minus, inkl_alt_elvarme, net_inkl_alt, net_inkl_alt_elvarme, net_inkl_tarif] (optional)
+      gln: 5790000705689 # GLN des Netzbetreibers (nur Dänemark), 13-stellige GLN-Nummer des dänischen Netzbetreibers, nur für die Preisarten net_*. Liste: elpriser.org/tariffer (optional)
+      actualonly: # Nur veröffentlichte Preise, Lässt die Tage aus, die nur eine Modell-Prognose sind (ab Veröffentlichung der Day-Ahead-Preise gegen 13 Uhr MEZ ist das der nächste Tag). (optional)
+      charges: # Aufschlag, Zusätzlicher fester Aufschlag pro kWh (optional)
+      chargesZones: # Aufschlagszonen, Zeitabhängige Aufschläge, die den Standardaufschlag überschreiben. (optional)
+      tax: # Steuer, Zusätzlicher prozentualer Aufschlag (z.B. 0.2 für 20%) (optional)
+      formula: math.Max((price + charges) * (1 + tax), 0.0) # Formel, Individuelle Formel zur Berechnung des Preises (optional)
+      average: # Stündliche Durchschnittskosten verwenden, optional
+params:
+  - name: zone
+    example: de
+    default:
+    choice: ['dk1', 'dk2', 'no1', 'no2', 'no3', 'no4', 'no5', 'se1', 'se2', 'se3', 'se4', 'fi', 'nl', 'de', 'fr', 'pl', 'it-n', 'at', 'be', 'ch', 'cz', 'hu', 'si', 'es', 'pt', 'sk', 'gr', 'ro', 'bg', 'hr', 'rs', 'ee', 'lv', 'lt', 'me', 'mk', 'al', 'xk', 'gb', 'ie']
+    unit:
+    description: Preiszone
+    help: 'Die Zonen der Schnittstelle: dk1 = Denmark - DK1 West (Jutland, Funen); dk2 = Denmark - DK2 East (Zealand, Bornholm); no1 = Norway - NO1 Oslo; no2 = Norway - NO2 Kristiansand; no3 = Norway - NO3 Trondheim; no4 = Norway - NO4 Tromsø; no5 = Norway - NO5 Bergen; se1 = Sweden - SE1 Luleå; se2 = Sweden - SE2 Sundsvall; se3 = Sweden - SE3 Stockholm; se4 = Sweden - SE4 Malmö; fi = Finland; nl = Netherlands; de = Germany and Luxembourg (DE-LU); fr = France; pl = Poland; it-n = Italy - North (IT-North); at = Austria; be = Belgium; ch = Switzerland; cz = Czechia; hu = Hungary; si = Slovenia; es = Spain; pt = Portugal; sk = Slovakia; gr = Greece; ro = Romania; bg = Bulgaria; hr = Croatia; rs = Serbia; ee = Estonia; lv = Latvia; lt = Lithuania; me = Montenegro; mk = North Macedonia; al = Albania; xk = Kosovo; gb = Great Britain (within-day market index, not day-ahead); ie = Ireland (all-island market).'
+    advanced: false
+    optional: false
+  - name: currency
+    example:
+    default: local
+    choice: ['local', 'eur']
+    unit:
+    description: Währung
+    help: '`local` = Währung der Zone (DKK, SEK, NOK, PLN, ... mit dem EZB-Referenzkurs umgerechnet), `eur` = Euro. Muss zur Währung in evcc passen. Dänemark ist immer DKK, Großbritannien immer GBP.'
+    advanced: false
+    optional: false
+  - name: pricemode
+    example:
+    default: inkl_alt
+    choice: ['inkl_alt', 'spot_inkl', 'spot_ex', 'inkl_alt_minus', 'inkl_alt_elvarme', 'net_inkl_alt', 'net_inkl_alt_elvarme', 'net_inkl_tarif']
+    unit:
+    description: Preisart (nur Dänemark)
+    help: Nur für dk1 und dk2. `inkl_alt` = Spot + Energinet-Tarife + Elafgift + MwSt. (alles außer dem Netztarif des Netzbetreibers); `net_inkl_alt` = der volle Preis inkl. Netztarif, braucht `gln`; `spot_ex` / `spot_inkl` = Börsenpreis ohne / mit MwSt.
+    advanced: false
+    optional: true
+  - name: gln
+    example: 5790000705689
+    default:
+    choice: []
+    unit:
+    description: GLN des Netzbetreibers (nur Dänemark)
+    help: '13-stellige GLN-Nummer des dänischen Netzbetreibers, nur für die Preisarten net_*. Liste: elpriser.org/tariffer'
+    advanced: false
+    optional: true
+  - name: actualonly
+    example:
+    default:
+    choice: []
+    unit:
+    description: Nur veröffentlichte Preise
+    help: Lässt die Tage aus, die nur eine Modell-Prognose sind (ab Veröffentlichung der Day-Ahead-Preise gegen 13 Uhr MEZ ist das der nächste Tag).
+    advanced: true
+    optional: true
+  - name: charges
+    example:
+    default:
+    choice: []
+    unit:
+    description: Aufschlag
+    help: Zusätzlicher fester Aufschlag pro kWh
+    advanced: true
+    optional: true
+  - name: chargesZones
+    example:
+    default:
+    choice: []
+    unit:
+    description: Aufschlagszonen
+    help: Zeitabhängige Aufschläge, die den Standardaufschlag überschreiben.
+    advanced: true
+    optional: true
+  - name: tax
+    example:
+    default:
+    choice: []
+    unit:
+    description: Steuer
+    help: Zusätzlicher prozentualer Aufschlag (z.B. 0.2 für 20%)
+    advanced: true
+    optional: true
+  - name: formula
+    example: math.Max((price + charges) * (1 + tax), 0.0)
+    default:
+    choice: []
+    unit:
+    description: Formel
+    help: Individuelle Formel zur Berechnung des Preises
+    advanced: true
+    optional: true
+  - name: average
+    example:
+    default:
+    choice: []
+    unit:
+    description: Stündliche Durchschnittskosten verwenden
+    help:
+    advanced: true
+    optional: true
