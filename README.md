@@ -17,7 +17,7 @@ tariff) for [evcc](https://evcc.io), so the planner can charge in the cheapest h
 
 Status: tested with evcc built from `master` on 2026-11-03 (`evcc tariff` against the live service) and with the
 template tests of the evcc repository. It is **not yet part of evcc**; until it is, copy a block from
-[`examples/`](examples) into your `evcc.yaml`.
+[`examples/`](examples) into your `evcc.yaml`. Submitted upstream: https://github.com/evcc-io/evcc/pull/35753
 
 ## Quick start
 
@@ -114,8 +114,8 @@ def actual_only:    false;  # true: leave out the days that are only a model for
 
 [`upstream/`](upstream) holds the same thing as an evcc tariff template (`type: template`, `template: elpriser`,
 choose zone / price type / currency in the UI): `templates/definition/tariff/elpriser.yaml` and the generated
-documentation. It passes `go test ./tariff/ ./util/templates/...` and loads with `evcc tariff`. **No pull request
-has been opened**, see [`upstream/README.md`](upstream/README.md).
+documentation. It passes `go test ./tariff/ ./util/templates/...` and loads with `evcc tariff`. The pull request is
+linked above (the version submitted there is slightly shortened), see [`upstream/README.md`](upstream/README.md).
 
 ## Development
 
