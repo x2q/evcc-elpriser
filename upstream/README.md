@@ -1,6 +1,6 @@
-# Prepared for evcc-io/evcc (not submitted)
+# Submitted to evcc-io/evcc (https://github.com/evcc-io/evcc/pull/35753)
 
-Nothing here has been sent upstream. To propose it:
+The version submitted upstream is slightly shortened (shorter descriptions, no zone list in the help text). To reproduce it:
 
 1. Copy `templates/definition/tariff/elpriser.yaml` into `evcc-io/evcc` at the same path.
 2. Run `go generate ./util/templates/...` (`make docs`) to write `templates/docs/{en,de}/tariff/*.yaml`;
