@@ -78,6 +78,22 @@ test('Denmark: /api/forecast price is passed through in DKK/kWh', () => {
   }
 });
 
+// --- Finland is on Helsinki's clock ------------------------------------------------------
+
+test('fi: hour 0 of a Finnish day is 22:00 UTC in winter (ENTSO-E: the 2026-11-03 market day starts at 23:00Z = hour 1), 21:00 UTC in summer', () => {
+  const day = (date) => ({ date, type: 'actual', prices: Array.from({ length: 24 }, (_, hour) => ({ hour, eur_mwh: hour === 1 ? 5.77 : hour })) });
+  const payload = { zone: 'fi', zoneInfo: { currency: 'EUR', rate: 1 }, unit: 'EUR/MWh', days: [day('2026-11-03'), day('2026-07-15')] };
+  const slots = runJq(program({ local: true }), payload);
+  const winter = slots.filter((s) => localParts(s.start, 'Europe/Helsinki').date === '2026-11-03');
+  assert.equal(winter.length, 24);
+  assert.equal(winter[0].start, '2026-11-02T22:00:00Z');
+  assert.equal(winter[1].start, '2026-11-02T23:00:00Z');
+  assert.equal(winter[1].value, 0.00577, 'the first market hour: 5.77 EUR/MWh');
+  assert.equal(winter[23].end, '2026-11-03T22:00:00Z');
+  const summer = slots.filter((s) => localParts(s.start, 'Europe/Helsinki').date === '2026-07-15');
+  assert.equal(summer[0].start, '2026-07-14T21:00:00Z');
+});
+
 // --- daylight saving: every zone, 2025-2030 --------------------------------------------
 
 function sweepPayload(zone, years) {

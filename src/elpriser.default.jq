@@ -12,8 +12,9 @@
 def local_currency: true;   # true: zone currency, false: EUR
 def actual_only:    false;      # true: skip the days that are model forecasts
 
-# Winter (standard time) offset from UTC in hours; every other zone is CET.
-def winter_offset: {"pt":0,"gb":0,"ie":0,"gr":2,"ro":2,"bg":2,"ee":2,"lv":2,"lt":2}[.] // 1;
+# Winter (standard time) offset from UTC in hours of the clock the API uses for the zone; every other zone is CET.
+# fi is on Helsinki's clock (EET): the API cuts Finland into Helsinki days, hour 0 = 22:00 UTC in winter.
+def winter_offset: {"pt":0,"gb":0,"ie":0,"gr":2,"ro":2,"bg":2,"ee":2,"lv":2,"lt":2,"fi":2}[.] // 1;
 
 # 01:00 UTC on the last Sunday of the 31-day month $m ("03" or "10") of year $y.
 def last_sunday($y; $m):
