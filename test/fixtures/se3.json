@@ -1,1420 +1,1788 @@
 {
   "zone": "se3",
-  "generated": "2026-11-02",
-  "trainedThrough": "2026-10-31",
-  "unit": "EUR/MWh",
-  "days": [
+  "currency": "SEK",
+  "unit": "SEK/kWh",
+  "generated": "2026-11-05",
+  "note": "Wholesale (day-ahead) price per kWh: no VAT, taxes or grid fees. Slots are UTC; a slot is 15 minutes where the 15-minute price is held and otherwise as long as its source (see end - start).",
+  "rate": 10.9845,
+  "rateDate": "2026-11-05",
+  "rateSource": "ECB",
+  "slots": [
     {
-      "date": "2026-11-02",
-      "type": "actual",
-      "prices": [
-        {
-          "hour": 0,
-          "eur_mwh": 133.51
-        },
-        {
-          "hour": 1,
-          "eur_mwh": 133.16
-        },
-        {
-          "hour": 2,
-          "eur_mwh": 133.91
-        },
-        {
-          "hour": 3,
-          "eur_mwh": 134.91
-        },
-        {
-          "hour": 4,
-          "eur_mwh": 136.34
-        },
-        {
-          "hour": 5,
-          "eur_mwh": 138.35
-        },
-        {
-          "hour": 6,
-          "eur_mwh": 260.32
-        },
-        {
-          "hour": 7,
-          "eur_mwh": 156.58
-        },
-        {
-          "hour": 8,
-          "eur_mwh": 174.84
-        },
-        {
-          "hour": 9,
-          "eur_mwh": 114.96
-        },
-        {
-          "hour": 10,
-          "eur_mwh": 114.07
-        },
-        {
-          "hour": 11,
-          "eur_mwh": 117.44
-        },
-        {
-          "hour": 12,
-          "eur_mwh": 117.05
-        },
-        {
-          "hour": 13,
-          "eur_mwh": 113.15
-        },
-        {
-          "hour": 14,
-          "eur_mwh": 114.1
-        },
-        {
-          "hour": 15,
-          "eur_mwh": 134.06
-        },
-        {
-          "hour": 16,
-          "eur_mwh": 204.27
-        },
-        {
-          "hour": 17,
-          "eur_mwh": 216.87
-        },
-        {
-          "hour": 18,
-          "eur_mwh": 247.2
-        },
-        {
-          "hour": 19,
-          "eur_mwh": 201.7
-        },
-        {
-          "hour": 20,
-          "eur_mwh": 143.62
-        },
-        {
-          "hour": 21,
-          "eur_mwh": 112.48
-        },
-        {
-          "hour": 22,
-          "eur_mwh": 118.44
-        },
-        {
-          "hour": 23,
-          "eur_mwh": 119.83
-        }
-      ]
+      "start": "2026-11-03T23:00:00Z",
+      "end": "2026-11-04T00:00:00Z",
+      "price": 1.85221,
+      "type": "actual"
     },
     {
-      "date": "2026-11-03",
-      "type": "actual",
-      "prices": [
-        {
-          "hour": 0,
-          "eur_mwh": 94.28
-        },
-        {
-          "hour": 1,
-          "eur_mwh": 100.55
-        },
-        {
-          "hour": 2,
-          "eur_mwh": 107.71
-        },
-        {
-          "hour": 3,
-          "eur_mwh": 90.09
-        },
-        {
-          "hour": 4,
-          "eur_mwh": 91.72
-        },
-        {
-          "hour": 5,
-          "eur_mwh": 105.17
-        },
-        {
-          "hour": 6,
-          "eur_mwh": 152.56
-        },
-        {
-          "hour": 7,
-          "eur_mwh": 197.47
-        },
-        {
-          "hour": 8,
-          "eur_mwh": 211.55
-        },
-        {
-          "hour": 9,
-          "eur_mwh": 184.31
-        },
-        {
-          "hour": 10,
-          "eur_mwh": 167.72
-        },
-        {
-          "hour": 11,
-          "eur_mwh": 148.2
-        },
-        {
-          "hour": 12,
-          "eur_mwh": 129.6
-        },
-        {
-          "hour": 13,
-          "eur_mwh": 156.47
-        },
-        {
-          "hour": 14,
-          "eur_mwh": 137.47
-        },
-        {
-          "hour": 15,
-          "eur_mwh": 191.41
-        },
-        {
-          "hour": 16,
-          "eur_mwh": 214.38
-        },
-        {
-          "hour": 17,
-          "eur_mwh": 247.2
-        },
-        {
-          "hour": 18,
-          "eur_mwh": 284.43
-        },
-        {
-          "hour": 19,
-          "eur_mwh": 283.07
-        },
-        {
-          "hour": 20,
-          "eur_mwh": 253.13
-        },
-        {
-          "hour": 21,
-          "eur_mwh": 215.56
-        },
-        {
-          "hour": 22,
-          "eur_mwh": 181.35
-        },
-        {
-          "hour": 23,
-          "eur_mwh": 104.94
-        }
-      ]
+      "start": "2026-11-04T00:00:00Z",
+      "end": "2026-11-04T01:00:00Z",
+      "price": 1.49477,
+      "type": "actual"
     },
     {
-      "date": "2026-11-04",
+      "start": "2026-11-04T01:00:00Z",
+      "end": "2026-11-04T02:00:00Z",
+      "price": 1.4505,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-04T02:00:00Z",
+      "end": "2026-11-04T03:00:00Z",
+      "price": 1.43556,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-04T03:00:00Z",
+      "end": "2026-11-04T04:00:00Z",
+      "price": 1.41019,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-04T04:00:00Z",
+      "end": "2026-11-04T05:00:00Z",
+      "price": 1.6781,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-04T05:00:00Z",
+      "end": "2026-11-04T06:00:00Z",
+      "price": 2.08914,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-04T06:00:00Z",
+      "end": "2026-11-04T07:00:00Z",
+      "price": 2.48151,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-04T07:00:00Z",
+      "end": "2026-11-04T08:00:00Z",
+      "price": 2.47821,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-04T08:00:00Z",
+      "end": "2026-11-04T09:00:00Z",
+      "price": 2.2404,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-04T09:00:00Z",
+      "end": "2026-11-04T10:00:00Z",
+      "price": 1.92481,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-04T10:00:00Z",
+      "end": "2026-11-04T11:00:00Z",
+      "price": 1.92778,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-04T11:00:00Z",
+      "end": "2026-11-04T12:00:00Z",
+      "price": 1.87648,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-04T12:00:00Z",
+      "end": "2026-11-04T13:00:00Z",
+      "price": 1.98841,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-04T13:00:00Z",
+      "end": "2026-11-04T14:00:00Z",
+      "price": 2.111,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-04T14:00:00Z",
+      "end": "2026-11-04T15:00:00Z",
+      "price": 2.31213,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-04T15:00:00Z",
+      "end": "2026-11-04T16:00:00Z",
+      "price": 2.38836,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-04T16:00:00Z",
+      "end": "2026-11-04T17:00:00Z",
+      "price": 2.43109,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-04T17:00:00Z",
+      "end": "2026-11-04T18:00:00Z",
+      "price": 2.22886,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-04T18:00:00Z",
+      "end": "2026-11-04T19:00:00Z",
+      "price": 1.96908,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-04T19:00:00Z",
+      "end": "2026-11-04T20:00:00Z",
+      "price": 1.62384,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-04T20:00:00Z",
+      "end": "2026-11-04T21:00:00Z",
+      "price": 1.41414,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-04T21:00:00Z",
+      "end": "2026-11-04T22:00:00Z",
+      "price": 1.34461,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-04T22:00:00Z",
+      "end": "2026-11-04T23:00:00Z",
+      "price": 0.9874,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-04T23:00:00Z",
+      "end": "2026-11-05T00:00:00Z",
+      "price": 0.67796,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-05T00:00:00Z",
+      "end": "2026-11-05T01:00:00Z",
+      "price": 0.63457,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-05T01:00:00Z",
+      "end": "2026-11-05T02:00:00Z",
+      "price": 0.70444,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-05T02:00:00Z",
+      "end": "2026-11-05T03:00:00Z",
+      "price": 0.68236,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-05T03:00:00Z",
+      "end": "2026-11-05T04:00:00Z",
+      "price": 0.62754,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-05T04:00:00Z",
+      "end": "2026-11-05T05:00:00Z",
+      "price": 0.65512,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-05T05:00:00Z",
+      "end": "2026-11-05T06:00:00Z",
+      "price": 1.25432,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-05T06:00:00Z",
+      "end": "2026-11-05T07:00:00Z",
+      "price": 1.55848,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-05T07:00:00Z",
+      "end": "2026-11-05T08:00:00Z",
+      "price": 1.54695,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-05T08:00:00Z",
+      "end": "2026-11-05T09:00:00Z",
+      "price": 1.30309,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-05T09:00:00Z",
+      "end": "2026-11-05T10:00:00Z",
+      "price": 1.36603,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-05T10:00:00Z",
+      "end": "2026-11-05T11:00:00Z",
+      "price": 1.14898,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-05T11:00:00Z",
+      "end": "2026-11-05T12:00:00Z",
+      "price": 1.10427,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-05T12:00:00Z",
+      "end": "2026-11-05T13:00:00Z",
+      "price": 1.11987,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-05T13:00:00Z",
+      "end": "2026-11-05T14:00:00Z",
+      "price": 1.46193,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-05T14:00:00Z",
+      "end": "2026-11-05T15:00:00Z",
+      "price": 2.07036,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-05T15:00:00Z",
+      "end": "2026-11-05T16:00:00Z",
+      "price": 2.08629,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-05T16:00:00Z",
+      "end": "2026-11-05T17:00:00Z",
+      "price": 2.20657,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-05T17:00:00Z",
+      "end": "2026-11-05T18:00:00Z",
+      "price": 1.65372,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-05T18:00:00Z",
+      "end": "2026-11-05T19:00:00Z",
+      "price": 1.60681,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-05T19:00:00Z",
+      "end": "2026-11-05T20:00:00Z",
+      "price": 1.30694,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-05T20:00:00Z",
+      "end": "2026-11-05T21:00:00Z",
+      "price": 0.99564,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-05T21:00:00Z",
+      "end": "2026-11-05T22:00:00Z",
+      "price": 0.90589,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-05T22:00:00Z",
+      "end": "2026-11-05T23:00:00Z",
+      "price": 0.83581,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-05T23:00:00Z",
+      "end": "2026-11-06T00:00:00Z",
+      "price": 0.78935,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-06T00:00:00Z",
+      "end": "2026-11-06T01:00:00Z",
+      "price": 0.79033,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-06T01:00:00Z",
+      "end": "2026-11-06T02:00:00Z",
+      "price": 0.69224,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-06T02:00:00Z",
+      "end": "2026-11-06T03:00:00Z",
+      "price": 0.8468,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-06T03:00:00Z",
+      "end": "2026-11-06T04:00:00Z",
+      "price": 1.16688,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-06T04:00:00Z",
+      "end": "2026-11-06T05:00:00Z",
+      "price": 1.0644,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-06T05:00:00Z",
+      "end": "2026-11-06T06:00:00Z",
+      "price": 2.20503,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-06T06:00:00Z",
+      "end": "2026-11-06T07:00:00Z",
+      "price": 2.89332,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-06T07:00:00Z",
+      "end": "2026-11-06T08:00:00Z",
+      "price": 3.15749,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-06T08:00:00Z",
+      "end": "2026-11-06T09:00:00Z",
+      "price": 2.76634,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-06T09:00:00Z",
+      "end": "2026-11-06T10:00:00Z",
+      "price": 2.52303,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-06T10:00:00Z",
+      "end": "2026-11-06T11:00:00Z",
+      "price": 2.36705,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-06T11:00:00Z",
+      "end": "2026-11-06T12:00:00Z",
+      "price": 2.26885,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-06T12:00:00Z",
+      "end": "2026-11-06T13:00:00Z",
+      "price": 1.90504,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-06T13:00:00Z",
+      "end": "2026-11-06T14:00:00Z",
+      "price": 1.55112,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-06T14:00:00Z",
+      "end": "2026-11-06T15:00:00Z",
+      "price": 2.68912,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-06T15:00:00Z",
+      "end": "2026-11-06T16:00:00Z",
+      "price": 3.52877,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-06T16:00:00Z",
+      "end": "2026-11-06T17:00:00Z",
+      "price": 3.25251,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-06T17:00:00Z",
+      "end": "2026-11-06T18:00:00Z",
+      "price": 3.12333,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-06T18:00:00Z",
+      "end": "2026-11-06T19:00:00Z",
+      "price": 2.51117,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-06T19:00:00Z",
+      "end": "2026-11-06T20:00:00Z",
+      "price": 2.34947,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-06T20:00:00Z",
+      "end": "2026-11-06T21:00:00Z",
+      "price": 2.0061,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-06T21:00:00Z",
+      "end": "2026-11-06T22:00:00Z",
+      "price": 1.31462,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-06T22:00:00Z",
+      "end": "2026-11-06T23:00:00Z",
+      "price": 1.11328,
+      "type": "actual"
+    },
+    {
+      "start": "2026-11-06T23:00:00Z",
+      "end": "2026-11-07T00:00:00Z",
+      "price": 1.15447,
       "type": "forecast",
-      "prices": [
-        {
-          "hour": 0,
-          "eur_mwh": 82.27,
-          "min_eur_mwh": 56.98,
-          "max_eur_mwh": 122.17
-        },
-        {
-          "hour": 1,
-          "eur_mwh": 82.93,
-          "min_eur_mwh": 57.64,
-          "max_eur_mwh": 122.83
-        },
-        {
-          "hour": 2,
-          "eur_mwh": 83.49,
-          "min_eur_mwh": 58.2,
-          "max_eur_mwh": 123.39
-        },
-        {
-          "hour": 3,
-          "eur_mwh": 76.08,
-          "min_eur_mwh": 50.79,
-          "max_eur_mwh": 115.98
-        },
-        {
-          "hour": 4,
-          "eur_mwh": 81,
-          "min_eur_mwh": 55.71,
-          "max_eur_mwh": 120.9
-        },
-        {
-          "hour": 5,
-          "eur_mwh": 83.67,
-          "min_eur_mwh": 58.38,
-          "max_eur_mwh": 123.57
-        },
-        {
-          "hour": 6,
-          "eur_mwh": 113.33,
-          "min_eur_mwh": 88.04,
-          "max_eur_mwh": 153.23
-        },
-        {
-          "hour": 7,
-          "eur_mwh": 120.5,
-          "min_eur_mwh": 95.21,
-          "max_eur_mwh": 160.4
-        },
-        {
-          "hour": 8,
-          "eur_mwh": 118.81,
-          "min_eur_mwh": 93.52,
-          "max_eur_mwh": 158.71
-        },
-        {
-          "hour": 9,
-          "eur_mwh": 116.23,
-          "min_eur_mwh": 90.94,
-          "max_eur_mwh": 156.13
-        },
-        {
-          "hour": 10,
-          "eur_mwh": 108.57,
-          "min_eur_mwh": 83.28,
-          "max_eur_mwh": 148.47
-        },
-        {
-          "hour": 11,
-          "eur_mwh": 107.42,
-          "min_eur_mwh": 82.13,
-          "max_eur_mwh": 147.32
-        },
-        {
-          "hour": 12,
-          "eur_mwh": 112.64,
-          "min_eur_mwh": 87.35,
-          "max_eur_mwh": 152.54
-        },
-        {
-          "hour": 13,
-          "eur_mwh": 112.72,
-          "min_eur_mwh": 87.43,
-          "max_eur_mwh": 152.62
-        },
-        {
-          "hour": 14,
-          "eur_mwh": 118.21,
-          "min_eur_mwh": 92.92,
-          "max_eur_mwh": 158.11
-        },
-        {
-          "hour": 15,
-          "eur_mwh": 130.45,
-          "min_eur_mwh": 105.16,
-          "max_eur_mwh": 170.35
-        },
-        {
-          "hour": 16,
-          "eur_mwh": 140.8,
-          "min_eur_mwh": 115.51,
-          "max_eur_mwh": 180.7
-        },
-        {
-          "hour": 17,
-          "eur_mwh": 146.52,
-          "min_eur_mwh": 121.23,
-          "max_eur_mwh": 186.42
-        },
-        {
-          "hour": 18,
-          "eur_mwh": 149.33,
-          "min_eur_mwh": 124.04,
-          "max_eur_mwh": 189.23
-        },
-        {
-          "hour": 19,
-          "eur_mwh": 143.47,
-          "min_eur_mwh": 118.18,
-          "max_eur_mwh": 183.37
-        },
-        {
-          "hour": 20,
-          "eur_mwh": 133.33,
-          "min_eur_mwh": 108.04,
-          "max_eur_mwh": 173.23
-        },
-        {
-          "hour": 21,
-          "eur_mwh": 120.15,
-          "min_eur_mwh": 94.86,
-          "max_eur_mwh": 160.05
-        },
-        {
-          "hour": 22,
-          "eur_mwh": 102.93,
-          "min_eur_mwh": 77.64,
-          "max_eur_mwh": 142.83
-        },
-        {
-          "hour": 23,
-          "eur_mwh": 91.07,
-          "min_eur_mwh": 65.78,
-          "max_eur_mwh": 130.97
-        }
-      ]
+      "min": 0.87667,
+      "max": 1.59275
     },
     {
-      "date": "2026-11-05",
+      "start": "2026-11-07T00:00:00Z",
+      "end": "2026-11-07T01:00:00Z",
+      "price": 1.16315,
       "type": "forecast",
-      "prices": [
-        {
-          "hour": 0,
-          "eur_mwh": 77.88,
-          "min_eur_mwh": 53.13,
-          "max_eur_mwh": 120.42
-        },
-        {
-          "hour": 1,
-          "eur_mwh": 73.52,
-          "min_eur_mwh": 48.77,
-          "max_eur_mwh": 116.06
-        },
-        {
-          "hour": 2,
-          "eur_mwh": 68.65,
-          "min_eur_mwh": 43.9,
-          "max_eur_mwh": 111.19
-        },
-        {
-          "hour": 3,
-          "eur_mwh": 64.88,
-          "min_eur_mwh": 40.13,
-          "max_eur_mwh": 107.42
-        },
-        {
-          "hour": 4,
-          "eur_mwh": 68.62,
-          "min_eur_mwh": 43.87,
-          "max_eur_mwh": 111.16
-        },
-        {
-          "hour": 5,
-          "eur_mwh": 76.72,
-          "min_eur_mwh": 51.97,
-          "max_eur_mwh": 119.26
-        },
-        {
-          "hour": 6,
-          "eur_mwh": 105.11,
-          "min_eur_mwh": 80.36,
-          "max_eur_mwh": 147.65
-        },
-        {
-          "hour": 7,
-          "eur_mwh": 121.48,
-          "min_eur_mwh": 96.73,
-          "max_eur_mwh": 164.02
-        },
-        {
-          "hour": 8,
-          "eur_mwh": 133.06,
-          "min_eur_mwh": 108.31,
-          "max_eur_mwh": 175.6
-        },
-        {
-          "hour": 9,
-          "eur_mwh": 123.99,
-          "min_eur_mwh": 99.24,
-          "max_eur_mwh": 166.53
-        },
-        {
-          "hour": 10,
-          "eur_mwh": 112.11,
-          "min_eur_mwh": 87.36,
-          "max_eur_mwh": 154.65
-        },
-        {
-          "hour": 11,
-          "eur_mwh": 98.74,
-          "min_eur_mwh": 73.99,
-          "max_eur_mwh": 141.28
-        },
-        {
-          "hour": 12,
-          "eur_mwh": 100.57,
-          "min_eur_mwh": 75.82,
-          "max_eur_mwh": 143.11
-        },
-        {
-          "hour": 13,
-          "eur_mwh": 100.74,
-          "min_eur_mwh": 75.99,
-          "max_eur_mwh": 143.28
-        },
-        {
-          "hour": 14,
-          "eur_mwh": 109.56,
-          "min_eur_mwh": 84.81,
-          "max_eur_mwh": 152.1
-        },
-        {
-          "hour": 15,
-          "eur_mwh": 127.39,
-          "min_eur_mwh": 102.64,
-          "max_eur_mwh": 169.93
-        },
-        {
-          "hour": 16,
-          "eur_mwh": 135.61,
-          "min_eur_mwh": 110.86,
-          "max_eur_mwh": 178.15
-        },
-        {
-          "hour": 17,
-          "eur_mwh": 155.19,
-          "min_eur_mwh": 130.44,
-          "max_eur_mwh": 197.73
-        },
-        {
-          "hour": 18,
-          "eur_mwh": 150.07,
-          "min_eur_mwh": 125.32,
-          "max_eur_mwh": 192.61
-        },
-        {
-          "hour": 19,
-          "eur_mwh": 148.15,
-          "min_eur_mwh": 123.4,
-          "max_eur_mwh": 190.69
-        },
-        {
-          "hour": 20,
-          "eur_mwh": 132.86,
-          "min_eur_mwh": 108.11,
-          "max_eur_mwh": 175.4
-        },
-        {
-          "hour": 21,
-          "eur_mwh": 122.48,
-          "min_eur_mwh": 97.73,
-          "max_eur_mwh": 165.02
-        },
-        {
-          "hour": 22,
-          "eur_mwh": 103.05,
-          "min_eur_mwh": 78.3,
-          "max_eur_mwh": 145.59
-        },
-        {
-          "hour": 23,
-          "eur_mwh": 80.75,
-          "min_eur_mwh": 56,
-          "max_eur_mwh": 123.29
-        }
-      ]
+      "min": 0.88535,
+      "max": 1.60143
     },
     {
-      "date": "2026-11-06",
+      "start": "2026-11-07T01:00:00Z",
+      "end": "2026-11-07T02:00:00Z",
+      "price": 1.12646,
       "type": "forecast",
-      "prices": [
-        {
-          "hour": 0,
-          "eur_mwh": 99.14,
-          "min_eur_mwh": 73.17,
-          "max_eur_mwh": 143.28
-        },
-        {
-          "hour": 1,
-          "eur_mwh": 96.23,
-          "min_eur_mwh": 70.26,
-          "max_eur_mwh": 140.37
-        },
-        {
-          "hour": 2,
-          "eur_mwh": 95.33,
-          "min_eur_mwh": 69.36,
-          "max_eur_mwh": 139.47
-        },
-        {
-          "hour": 3,
-          "eur_mwh": 95.42,
-          "min_eur_mwh": 69.45,
-          "max_eur_mwh": 139.56
-        },
-        {
-          "hour": 4,
-          "eur_mwh": 95.82,
-          "min_eur_mwh": 69.85,
-          "max_eur_mwh": 139.96
-        },
-        {
-          "hour": 5,
-          "eur_mwh": 110.58,
-          "min_eur_mwh": 84.61,
-          "max_eur_mwh": 154.72
-        },
-        {
-          "hour": 6,
-          "eur_mwh": 147.78,
-          "min_eur_mwh": 121.81,
-          "max_eur_mwh": 191.92
-        },
-        {
-          "hour": 7,
-          "eur_mwh": 173.82,
-          "min_eur_mwh": 147.85,
-          "max_eur_mwh": 217.96
-        },
-        {
-          "hour": 8,
-          "eur_mwh": 183.53,
-          "min_eur_mwh": 157.56,
-          "max_eur_mwh": 227.67
-        },
-        {
-          "hour": 9,
-          "eur_mwh": 169.02,
-          "min_eur_mwh": 143.05,
-          "max_eur_mwh": 213.16
-        },
-        {
-          "hour": 10,
-          "eur_mwh": 150.28,
-          "min_eur_mwh": 124.31,
-          "max_eur_mwh": 194.42
-        },
-        {
-          "hour": 11,
-          "eur_mwh": 136.36,
-          "min_eur_mwh": 110.39,
-          "max_eur_mwh": 180.5
-        },
-        {
-          "hour": 12,
-          "eur_mwh": 133.24,
-          "min_eur_mwh": 107.27,
-          "max_eur_mwh": 177.38
-        },
-        {
-          "hour": 13,
-          "eur_mwh": 130.26,
-          "min_eur_mwh": 104.29,
-          "max_eur_mwh": 174.4
-        },
-        {
-          "hour": 14,
-          "eur_mwh": 134.31,
-          "min_eur_mwh": 108.34,
-          "max_eur_mwh": 178.45
-        },
-        {
-          "hour": 15,
-          "eur_mwh": 151.02,
-          "min_eur_mwh": 125.05,
-          "max_eur_mwh": 195.16
-        },
-        {
-          "hour": 16,
-          "eur_mwh": 161.8,
-          "min_eur_mwh": 135.83,
-          "max_eur_mwh": 205.94
-        },
-        {
-          "hour": 17,
-          "eur_mwh": 184.35,
-          "min_eur_mwh": 158.38,
-          "max_eur_mwh": 228.49
-        },
-        {
-          "hour": 18,
-          "eur_mwh": 181.46,
-          "min_eur_mwh": 155.49,
-          "max_eur_mwh": 225.6
-        },
-        {
-          "hour": 19,
-          "eur_mwh": 158.2,
-          "min_eur_mwh": 132.23,
-          "max_eur_mwh": 202.34
-        },
-        {
-          "hour": 20,
-          "eur_mwh": 137.12,
-          "min_eur_mwh": 111.15,
-          "max_eur_mwh": 181.26
-        },
-        {
-          "hour": 21,
-          "eur_mwh": 121.23,
-          "min_eur_mwh": 95.26,
-          "max_eur_mwh": 165.37
-        },
-        {
-          "hour": 22,
-          "eur_mwh": 118.66,
-          "min_eur_mwh": 92.69,
-          "max_eur_mwh": 162.8
-        },
-        {
-          "hour": 23,
-          "eur_mwh": 103.65,
-          "min_eur_mwh": 77.68,
-          "max_eur_mwh": 147.79
-        }
-      ]
+      "min": 0.84866,
+      "max": 1.56474
     },
     {
-      "date": "2026-11-07",
+      "start": "2026-11-07T02:00:00Z",
+      "end": "2026-11-07T03:00:00Z",
+      "price": 1.02859,
       "type": "forecast",
-      "prices": [
-        {
-          "hour": 0,
-          "eur_mwh": 93.57,
-          "min_eur_mwh": 66.74,
-          "max_eur_mwh": 140.37
-        },
-        {
-          "hour": 1,
-          "eur_mwh": 93.23,
-          "min_eur_mwh": 66.4,
-          "max_eur_mwh": 140.03
-        },
-        {
-          "hour": 2,
-          "eur_mwh": 87.88,
-          "min_eur_mwh": 61.05,
-          "max_eur_mwh": 134.68
-        },
-        {
-          "hour": 3,
-          "eur_mwh": 86.37,
-          "min_eur_mwh": 59.54,
-          "max_eur_mwh": 133.17
-        },
-        {
-          "hour": 4,
-          "eur_mwh": 77.98,
-          "min_eur_mwh": 51.15,
-          "max_eur_mwh": 124.78
-        },
-        {
-          "hour": 5,
-          "eur_mwh": 79.28,
-          "min_eur_mwh": 52.45,
-          "max_eur_mwh": 126.08
-        },
-        {
-          "hour": 6,
-          "eur_mwh": 79.28,
-          "min_eur_mwh": 52.45,
-          "max_eur_mwh": 126.08
-        },
-        {
-          "hour": 7,
-          "eur_mwh": 85.36,
-          "min_eur_mwh": 58.53,
-          "max_eur_mwh": 132.16
-        },
-        {
-          "hour": 8,
-          "eur_mwh": 98.82,
-          "min_eur_mwh": 71.99,
-          "max_eur_mwh": 145.62
-        },
-        {
-          "hour": 9,
-          "eur_mwh": 105.8,
-          "min_eur_mwh": 78.97,
-          "max_eur_mwh": 152.6
-        },
-        {
-          "hour": 10,
-          "eur_mwh": 98.8,
-          "min_eur_mwh": 71.97,
-          "max_eur_mwh": 145.6
-        },
-        {
-          "hour": 11,
-          "eur_mwh": 96.8,
-          "min_eur_mwh": 69.97,
-          "max_eur_mwh": 143.6
-        },
-        {
-          "hour": 12,
-          "eur_mwh": 94.21,
-          "min_eur_mwh": 67.38,
-          "max_eur_mwh": 141.01
-        },
-        {
-          "hour": 13,
-          "eur_mwh": 96.69,
-          "min_eur_mwh": 69.86,
-          "max_eur_mwh": 143.49
-        },
-        {
-          "hour": 14,
-          "eur_mwh": 99.83,
-          "min_eur_mwh": 73,
-          "max_eur_mwh": 146.63
-        },
-        {
-          "hour": 15,
-          "eur_mwh": 107.66,
-          "min_eur_mwh": 80.83,
-          "max_eur_mwh": 154.46
-        },
-        {
-          "hour": 16,
-          "eur_mwh": 113.9,
-          "min_eur_mwh": 87.07,
-          "max_eur_mwh": 160.7
-        },
-        {
-          "hour": 17,
-          "eur_mwh": 122.93,
-          "min_eur_mwh": 96.1,
-          "max_eur_mwh": 169.73
-        },
-        {
-          "hour": 18,
-          "eur_mwh": 115.93,
-          "min_eur_mwh": 89.1,
-          "max_eur_mwh": 162.73
-        },
-        {
-          "hour": 19,
-          "eur_mwh": 116.67,
-          "min_eur_mwh": 89.84,
-          "max_eur_mwh": 163.47
-        },
-        {
-          "hour": 20,
-          "eur_mwh": 104.53,
-          "min_eur_mwh": 77.7,
-          "max_eur_mwh": 151.33
-        },
-        {
-          "hour": 21,
-          "eur_mwh": 95.55,
-          "min_eur_mwh": 68.72,
-          "max_eur_mwh": 142.35
-        },
-        {
-          "hour": 22,
-          "eur_mwh": 86.62,
-          "min_eur_mwh": 59.79,
-          "max_eur_mwh": 133.42
-        },
-        {
-          "hour": 23,
-          "eur_mwh": 80.54,
-          "min_eur_mwh": 53.71,
-          "max_eur_mwh": 127.34
-        }
-      ]
+      "min": 0.75079,
+      "max": 1.46687
     },
     {
-      "date": "2026-11-08",
+      "start": "2026-11-07T03:00:00Z",
+      "end": "2026-11-07T04:00:00Z",
+      "price": 1.06363,
       "type": "forecast",
-      "prices": [
-        {
-          "hour": 0,
-          "eur_mwh": 94.85,
-          "min_eur_mwh": 67.46,
-          "max_eur_mwh": 141.93
-        },
-        {
-          "hour": 1,
-          "eur_mwh": 90.61,
-          "min_eur_mwh": 63.22,
-          "max_eur_mwh": 137.69
-        },
-        {
-          "hour": 2,
-          "eur_mwh": 92.82,
-          "min_eur_mwh": 65.43,
-          "max_eur_mwh": 139.9
-        },
-        {
-          "hour": 3,
-          "eur_mwh": 92.46,
-          "min_eur_mwh": 65.07,
-          "max_eur_mwh": 139.54
-        },
-        {
-          "hour": 4,
-          "eur_mwh": 92.11,
-          "min_eur_mwh": 64.72,
-          "max_eur_mwh": 139.19
-        },
-        {
-          "hour": 5,
-          "eur_mwh": 91.86,
-          "min_eur_mwh": 64.47,
-          "max_eur_mwh": 138.94
-        },
-        {
-          "hour": 6,
-          "eur_mwh": 96.34,
-          "min_eur_mwh": 68.95,
-          "max_eur_mwh": 143.42
-        },
-        {
-          "hour": 7,
-          "eur_mwh": 107.63,
-          "min_eur_mwh": 80.24,
-          "max_eur_mwh": 154.71
-        },
-        {
-          "hour": 8,
-          "eur_mwh": 108.08,
-          "min_eur_mwh": 80.69,
-          "max_eur_mwh": 155.16
-        },
-        {
-          "hour": 9,
-          "eur_mwh": 103.04,
-          "min_eur_mwh": 75.65,
-          "max_eur_mwh": 150.12
-        },
-        {
-          "hour": 10,
-          "eur_mwh": 102.44,
-          "min_eur_mwh": 75.05,
-          "max_eur_mwh": 149.52
-        },
-        {
-          "hour": 11,
-          "eur_mwh": 100.82,
-          "min_eur_mwh": 73.43,
-          "max_eur_mwh": 147.9
-        },
-        {
-          "hour": 12,
-          "eur_mwh": 102.08,
-          "min_eur_mwh": 74.69,
-          "max_eur_mwh": 149.16
-        },
-        {
-          "hour": 13,
-          "eur_mwh": 98.75,
-          "min_eur_mwh": 71.36,
-          "max_eur_mwh": 145.83
-        },
-        {
-          "hour": 14,
-          "eur_mwh": 107.26,
-          "min_eur_mwh": 79.87,
-          "max_eur_mwh": 154.34
-        },
-        {
-          "hour": 15,
-          "eur_mwh": 122.96,
-          "min_eur_mwh": 95.57,
-          "max_eur_mwh": 170.04
-        },
-        {
-          "hour": 16,
-          "eur_mwh": 142.94,
-          "min_eur_mwh": 115.55,
-          "max_eur_mwh": 190.02
-        },
-        {
-          "hour": 17,
-          "eur_mwh": 152.26,
-          "min_eur_mwh": 124.87,
-          "max_eur_mwh": 199.34
-        },
-        {
-          "hour": 18,
-          "eur_mwh": 159.27,
-          "min_eur_mwh": 131.88,
-          "max_eur_mwh": 206.35
-        },
-        {
-          "hour": 19,
-          "eur_mwh": 142.46,
-          "min_eur_mwh": 115.07,
-          "max_eur_mwh": 189.54
-        },
-        {
-          "hour": 20,
-          "eur_mwh": 148.33,
-          "min_eur_mwh": 120.94,
-          "max_eur_mwh": 195.41
-        },
-        {
-          "hour": 21,
-          "eur_mwh": 132.66,
-          "min_eur_mwh": 105.27,
-          "max_eur_mwh": 179.74
-        },
-        {
-          "hour": 22,
-          "eur_mwh": 115.84,
-          "min_eur_mwh": 88.45,
-          "max_eur_mwh": 162.92
-        },
-        {
-          "hour": 23,
-          "eur_mwh": 103.46,
-          "min_eur_mwh": 76.07,
-          "max_eur_mwh": 150.54
-        }
-      ]
+      "min": 0.78583,
+      "max": 1.50191
     },
     {
-      "date": "2026-11-09",
+      "start": "2026-11-07T04:00:00Z",
+      "end": "2026-11-07T05:00:00Z",
+      "price": 1.12185,
       "type": "forecast",
-      "prices": [
-        {
-          "hour": 0,
-          "eur_mwh": 98.96,
-          "min_eur_mwh": 69.16,
-          "max_eur_mwh": 145.65
-        },
-        {
-          "hour": 1,
-          "eur_mwh": 96.14,
-          "min_eur_mwh": 66.34,
-          "max_eur_mwh": 142.83
-        },
-        {
-          "hour": 2,
-          "eur_mwh": 96.33,
-          "min_eur_mwh": 66.53,
-          "max_eur_mwh": 143.02
-        },
-        {
-          "hour": 3,
-          "eur_mwh": 96.37,
-          "min_eur_mwh": 66.57,
-          "max_eur_mwh": 143.06
-        },
-        {
-          "hour": 4,
-          "eur_mwh": 96.69,
-          "min_eur_mwh": 66.89,
-          "max_eur_mwh": 143.38
-        },
-        {
-          "hour": 5,
-          "eur_mwh": 109.89,
-          "min_eur_mwh": 80.09,
-          "max_eur_mwh": 156.58
-        },
-        {
-          "hour": 6,
-          "eur_mwh": 155.66,
-          "min_eur_mwh": 125.86,
-          "max_eur_mwh": 202.35
-        },
-        {
-          "hour": 7,
-          "eur_mwh": 155.71,
-          "min_eur_mwh": 125.91,
-          "max_eur_mwh": 202.4
-        },
-        {
-          "hour": 8,
-          "eur_mwh": 159.97,
-          "min_eur_mwh": 130.17,
-          "max_eur_mwh": 206.66
-        },
-        {
-          "hour": 9,
-          "eur_mwh": 152.48,
-          "min_eur_mwh": 122.68,
-          "max_eur_mwh": 199.17
-        },
-        {
-          "hour": 10,
-          "eur_mwh": 147.5,
-          "min_eur_mwh": 117.7,
-          "max_eur_mwh": 194.19
-        },
-        {
-          "hour": 11,
-          "eur_mwh": 143.51,
-          "min_eur_mwh": 113.71,
-          "max_eur_mwh": 190.2
-        },
-        {
-          "hour": 12,
-          "eur_mwh": 138.8,
-          "min_eur_mwh": 109,
-          "max_eur_mwh": 185.49
-        },
-        {
-          "hour": 13,
-          "eur_mwh": 134.37,
-          "min_eur_mwh": 104.57,
-          "max_eur_mwh": 181.06
-        },
-        {
-          "hour": 14,
-          "eur_mwh": 136.79,
-          "min_eur_mwh": 106.99,
-          "max_eur_mwh": 183.48
-        },
-        {
-          "hour": 15,
-          "eur_mwh": 144.07,
-          "min_eur_mwh": 114.27,
-          "max_eur_mwh": 190.76
-        },
-        {
-          "hour": 16,
-          "eur_mwh": 162.48,
-          "min_eur_mwh": 132.68,
-          "max_eur_mwh": 209.17
-        },
-        {
-          "hour": 17,
-          "eur_mwh": 170.92,
-          "min_eur_mwh": 141.12,
-          "max_eur_mwh": 217.61
-        },
-        {
-          "hour": 18,
-          "eur_mwh": 175.35,
-          "min_eur_mwh": 145.55,
-          "max_eur_mwh": 222.04
-        },
-        {
-          "hour": 19,
-          "eur_mwh": 165.03,
-          "min_eur_mwh": 135.23,
-          "max_eur_mwh": 211.72
-        },
-        {
-          "hour": 20,
-          "eur_mwh": 146.07,
-          "min_eur_mwh": 116.27,
-          "max_eur_mwh": 192.76
-        },
-        {
-          "hour": 21,
-          "eur_mwh": 127.12,
-          "min_eur_mwh": 97.32,
-          "max_eur_mwh": 173.81
-        },
-        {
-          "hour": 22,
-          "eur_mwh": 121.46,
-          "min_eur_mwh": 91.66,
-          "max_eur_mwh": 168.15
-        },
-        {
-          "hour": 23,
-          "eur_mwh": 115.29,
-          "min_eur_mwh": 85.49,
-          "max_eur_mwh": 161.98
-        }
-      ]
+      "min": 0.84405,
+      "max": 1.56013
     },
     {
-      "date": "2026-11-10",
+      "start": "2026-11-07T05:00:00Z",
+      "end": "2026-11-07T06:00:00Z",
+      "price": 1.19588,
       "type": "forecast",
-      "prices": [
-        {
-          "hour": 0,
-          "eur_mwh": 88.24,
-          "min_eur_mwh": 58.45,
-          "max_eur_mwh": 134.99
-        },
-        {
-          "hour": 1,
-          "eur_mwh": 85.03,
-          "min_eur_mwh": 55.24,
-          "max_eur_mwh": 131.78
-        },
-        {
-          "hour": 2,
-          "eur_mwh": 81.17,
-          "min_eur_mwh": 51.38,
-          "max_eur_mwh": 127.92
-        },
-        {
-          "hour": 3,
-          "eur_mwh": 75.75,
-          "min_eur_mwh": 45.96,
-          "max_eur_mwh": 122.5
-        },
-        {
-          "hour": 4,
-          "eur_mwh": 71.03,
-          "min_eur_mwh": 41.24,
-          "max_eur_mwh": 117.78
-        },
-        {
-          "hour": 5,
-          "eur_mwh": 76.18,
-          "min_eur_mwh": 46.39,
-          "max_eur_mwh": 122.93
-        },
-        {
-          "hour": 6,
-          "eur_mwh": 105.93,
-          "min_eur_mwh": 76.14,
-          "max_eur_mwh": 152.68
-        },
-        {
-          "hour": 7,
-          "eur_mwh": 126.23,
-          "min_eur_mwh": 96.44,
-          "max_eur_mwh": 172.98
-        },
-        {
-          "hour": 8,
-          "eur_mwh": 124.81,
-          "min_eur_mwh": 95.02,
-          "max_eur_mwh": 171.56
-        },
-        {
-          "hour": 9,
-          "eur_mwh": 124.58,
-          "min_eur_mwh": 94.79,
-          "max_eur_mwh": 171.33
-        },
-        {
-          "hour": 10,
-          "eur_mwh": 116.75,
-          "min_eur_mwh": 86.96,
-          "max_eur_mwh": 163.5
-        },
-        {
-          "hour": 11,
-          "eur_mwh": 108.52,
-          "min_eur_mwh": 78.73,
-          "max_eur_mwh": 155.27
-        },
-        {
-          "hour": 12,
-          "eur_mwh": 109.26,
-          "min_eur_mwh": 79.47,
-          "max_eur_mwh": 156.01
-        },
-        {
-          "hour": 13,
-          "eur_mwh": 113.05,
-          "min_eur_mwh": 83.26,
-          "max_eur_mwh": 159.8
-        },
-        {
-          "hour": 14,
-          "eur_mwh": 110.88,
-          "min_eur_mwh": 81.09,
-          "max_eur_mwh": 157.63
-        },
-        {
-          "hour": 15,
-          "eur_mwh": 126.55,
-          "min_eur_mwh": 96.76,
-          "max_eur_mwh": 173.3
-        },
-        {
-          "hour": 16,
-          "eur_mwh": 133.01,
-          "min_eur_mwh": 103.22,
-          "max_eur_mwh": 179.76
-        },
-        {
-          "hour": 17,
-          "eur_mwh": 139.28,
-          "min_eur_mwh": 109.49,
-          "max_eur_mwh": 186.03
-        },
-        {
-          "hour": 18,
-          "eur_mwh": 136.19,
-          "min_eur_mwh": 106.4,
-          "max_eur_mwh": 182.94
-        },
-        {
-          "hour": 19,
-          "eur_mwh": 124.49,
-          "min_eur_mwh": 94.7,
-          "max_eur_mwh": 171.24
-        },
-        {
-          "hour": 20,
-          "eur_mwh": 109.76,
-          "min_eur_mwh": 79.97,
-          "max_eur_mwh": 156.51
-        },
-        {
-          "hour": 21,
-          "eur_mwh": 89.22,
-          "min_eur_mwh": 59.43,
-          "max_eur_mwh": 135.97
-        },
-        {
-          "hour": 22,
-          "eur_mwh": 70.61,
-          "min_eur_mwh": 40.82,
-          "max_eur_mwh": 117.36
-        },
-        {
-          "hour": 23,
-          "eur_mwh": 61.12,
-          "min_eur_mwh": 31.33,
-          "max_eur_mwh": 107.87
-        }
-      ]
+      "min": 0.91808,
+      "max": 1.63416
     },
     {
-      "date": "2026-11-11",
+      "start": "2026-11-07T06:00:00Z",
+      "end": "2026-11-07T07:00:00Z",
+      "price": 1.27354,
       "type": "forecast",
-      "prices": [
-        {
-          "hour": 0,
-          "eur_mwh": 66.17,
-          "min_eur_mwh": 36.44,
-          "max_eur_mwh": 113.94
-        },
-        {
-          "hour": 1,
-          "eur_mwh": 68.04,
-          "min_eur_mwh": 38.31,
-          "max_eur_mwh": 115.81
-        },
-        {
-          "hour": 2,
-          "eur_mwh": 71.31,
-          "min_eur_mwh": 41.58,
-          "max_eur_mwh": 119.08
-        },
-        {
-          "hour": 3,
-          "eur_mwh": 66.83,
-          "min_eur_mwh": 37.1,
-          "max_eur_mwh": 114.6
-        },
-        {
-          "hour": 4,
-          "eur_mwh": 76.16,
-          "min_eur_mwh": 46.43,
-          "max_eur_mwh": 123.93
-        },
-        {
-          "hour": 5,
-          "eur_mwh": 85.95,
-          "min_eur_mwh": 56.22,
-          "max_eur_mwh": 133.72
-        },
-        {
-          "hour": 6,
-          "eur_mwh": 108.36,
-          "min_eur_mwh": 78.63,
-          "max_eur_mwh": 156.13
-        },
-        {
-          "hour": 7,
-          "eur_mwh": 125.41,
-          "min_eur_mwh": 95.68,
-          "max_eur_mwh": 173.18
-        },
-        {
-          "hour": 8,
-          "eur_mwh": 125.15,
-          "min_eur_mwh": 95.42,
-          "max_eur_mwh": 172.92
-        },
-        {
-          "hour": 9,
-          "eur_mwh": 127.04,
-          "min_eur_mwh": 97.31,
-          "max_eur_mwh": 174.81
-        },
-        {
-          "hour": 10,
-          "eur_mwh": 123.02,
-          "min_eur_mwh": 93.29,
-          "max_eur_mwh": 170.79
-        },
-        {
-          "hour": 11,
-          "eur_mwh": 119.56,
-          "min_eur_mwh": 89.83,
-          "max_eur_mwh": 167.33
-        },
-        {
-          "hour": 12,
-          "eur_mwh": 117.78,
-          "min_eur_mwh": 88.05,
-          "max_eur_mwh": 165.55
-        },
-        {
-          "hour": 13,
-          "eur_mwh": 118.22,
-          "min_eur_mwh": 88.49,
-          "max_eur_mwh": 165.99
-        },
-        {
-          "hour": 14,
-          "eur_mwh": 131.88,
-          "min_eur_mwh": 102.15,
-          "max_eur_mwh": 179.65
-        },
-        {
-          "hour": 15,
-          "eur_mwh": 146.74,
-          "min_eur_mwh": 117.01,
-          "max_eur_mwh": 194.51
-        },
-        {
-          "hour": 16,
-          "eur_mwh": 165.77,
-          "min_eur_mwh": 136.04,
-          "max_eur_mwh": 213.54
-        },
-        {
-          "hour": 17,
-          "eur_mwh": 172.4,
-          "min_eur_mwh": 142.67,
-          "max_eur_mwh": 220.17
-        },
-        {
-          "hour": 18,
-          "eur_mwh": 173.08,
-          "min_eur_mwh": 143.35,
-          "max_eur_mwh": 220.85
-        },
-        {
-          "hour": 19,
-          "eur_mwh": 168.37,
-          "min_eur_mwh": 138.64,
-          "max_eur_mwh": 216.14
-        },
-        {
-          "hour": 20,
-          "eur_mwh": 149.05,
-          "min_eur_mwh": 119.32,
-          "max_eur_mwh": 196.82
-        },
-        {
-          "hour": 21,
-          "eur_mwh": 134.49,
-          "min_eur_mwh": 104.76,
-          "max_eur_mwh": 182.26
-        },
-        {
-          "hour": 22,
-          "eur_mwh": 121.58,
-          "min_eur_mwh": 91.85,
-          "max_eur_mwh": 169.35
-        },
-        {
-          "hour": 23,
-          "eur_mwh": 111.13,
-          "min_eur_mwh": 81.4,
-          "max_eur_mwh": 158.9
-        }
-      ]
+      "min": 0.99574,
+      "max": 1.71182
+    },
+    {
+      "start": "2026-11-07T07:00:00Z",
+      "end": "2026-11-07T08:00:00Z",
+      "price": 1.36471,
+      "type": "forecast",
+      "min": 1.08692,
+      "max": 1.803
+    },
+    {
+      "start": "2026-11-07T08:00:00Z",
+      "end": "2026-11-07T09:00:00Z",
+      "price": 1.34571,
+      "type": "forecast",
+      "min": 1.06791,
+      "max": 1.78399
+    },
+    {
+      "start": "2026-11-07T09:00:00Z",
+      "end": "2026-11-07T10:00:00Z",
+      "price": 1.31001,
+      "type": "forecast",
+      "min": 1.03221,
+      "max": 1.74829
+    },
+    {
+      "start": "2026-11-07T10:00:00Z",
+      "end": "2026-11-07T11:00:00Z",
+      "price": 1.23905,
+      "type": "forecast",
+      "min": 0.96125,
+      "max": 1.67733
+    },
+    {
+      "start": "2026-11-07T11:00:00Z",
+      "end": "2026-11-07T12:00:00Z",
+      "price": 1.19775,
+      "type": "forecast",
+      "min": 0.91995,
+      "max": 1.63603
+    },
+    {
+      "start": "2026-11-07T12:00:00Z",
+      "end": "2026-11-07T13:00:00Z",
+      "price": 1.20379,
+      "type": "forecast",
+      "min": 0.92599,
+      "max": 1.64207
+    },
+    {
+      "start": "2026-11-07T13:00:00Z",
+      "end": "2026-11-07T14:00:00Z",
+      "price": 1.23905,
+      "type": "forecast",
+      "min": 0.96125,
+      "max": 1.67733
+    },
+    {
+      "start": "2026-11-07T14:00:00Z",
+      "end": "2026-11-07T15:00:00Z",
+      "price": 1.36845,
+      "type": "forecast",
+      "min": 1.09065,
+      "max": 1.80673
+    },
+    {
+      "start": "2026-11-07T15:00:00Z",
+      "end": "2026-11-07T16:00:00Z",
+      "price": 1.48631,
+      "type": "forecast",
+      "min": 1.20851,
+      "max": 1.92459
+    },
+    {
+      "start": "2026-11-07T16:00:00Z",
+      "end": "2026-11-07T17:00:00Z",
+      "price": 1.5141,
+      "type": "forecast",
+      "min": 1.23631,
+      "max": 1.95239
+    },
+    {
+      "start": "2026-11-07T17:00:00Z",
+      "end": "2026-11-07T18:00:00Z",
+      "price": 1.4192,
+      "type": "forecast",
+      "min": 1.1414,
+      "max": 1.85748
+    },
+    {
+      "start": "2026-11-07T18:00:00Z",
+      "end": "2026-11-07T19:00:00Z",
+      "price": 1.42216,
+      "type": "forecast",
+      "min": 1.14437,
+      "max": 1.86044
+    },
+    {
+      "start": "2026-11-07T19:00:00Z",
+      "end": "2026-11-07T20:00:00Z",
+      "price": 1.25245,
+      "type": "forecast",
+      "min": 0.97465,
+      "max": 1.69073
+    },
+    {
+      "start": "2026-11-07T20:00:00Z",
+      "end": "2026-11-07T21:00:00Z",
+      "price": 1.14667,
+      "type": "forecast",
+      "min": 0.86887,
+      "max": 1.58495
+    },
+    {
+      "start": "2026-11-07T21:00:00Z",
+      "end": "2026-11-07T22:00:00Z",
+      "price": 1.05111,
+      "type": "forecast",
+      "min": 0.77331,
+      "max": 1.48939
+    },
+    {
+      "start": "2026-11-07T22:00:00Z",
+      "end": "2026-11-07T23:00:00Z",
+      "price": 1.00354,
+      "type": "forecast",
+      "min": 0.72575,
+      "max": 1.44183
+    },
+    {
+      "start": "2026-11-07T23:00:00Z",
+      "end": "2026-11-08T00:00:00Z",
+      "price": 0.99553,
+      "type": "forecast",
+      "min": 0.72366,
+      "max": 1.46281
+    },
+    {
+      "start": "2026-11-08T00:00:00Z",
+      "end": "2026-11-08T01:00:00Z",
+      "price": 0.92446,
+      "type": "forecast",
+      "min": 0.65259,
+      "max": 1.39174
+    },
+    {
+      "start": "2026-11-08T01:00:00Z",
+      "end": "2026-11-08T02:00:00Z",
+      "price": 0.97498,
+      "type": "forecast",
+      "min": 0.70312,
+      "max": 1.44226
+    },
+    {
+      "start": "2026-11-08T02:00:00Z",
+      "end": "2026-11-08T03:00:00Z",
+      "price": 0.96411,
+      "type": "forecast",
+      "min": 0.69224,
+      "max": 1.43139
+    },
+    {
+      "start": "2026-11-08T03:00:00Z",
+      "end": "2026-11-08T04:00:00Z",
+      "price": 0.97048,
+      "type": "forecast",
+      "min": 0.69861,
+      "max": 1.43776
+    },
+    {
+      "start": "2026-11-08T04:00:00Z",
+      "end": "2026-11-08T05:00:00Z",
+      "price": 0.97147,
+      "type": "forecast",
+      "min": 0.6996,
+      "max": 1.43875
+    },
+    {
+      "start": "2026-11-08T05:00:00Z",
+      "end": "2026-11-08T06:00:00Z",
+      "price": 1.01826,
+      "type": "forecast",
+      "min": 0.7464,
+      "max": 1.48554
+    },
+    {
+      "start": "2026-11-08T06:00:00Z",
+      "end": "2026-11-08T07:00:00Z",
+      "price": 1.11064,
+      "type": "forecast",
+      "min": 0.83878,
+      "max": 1.57792
+    },
+    {
+      "start": "2026-11-08T07:00:00Z",
+      "end": "2026-11-08T08:00:00Z",
+      "price": 1.16864,
+      "type": "forecast",
+      "min": 0.89677,
+      "max": 1.63592
+    },
+    {
+      "start": "2026-11-08T08:00:00Z",
+      "end": "2026-11-08T09:00:00Z",
+      "price": 1.11339,
+      "type": "forecast",
+      "min": 0.84152,
+      "max": 1.58067
+    },
+    {
+      "start": "2026-11-08T09:00:00Z",
+      "end": "2026-11-08T10:00:00Z",
+      "price": 1.12108,
+      "type": "forecast",
+      "min": 0.84921,
+      "max": 1.58836
+    },
+    {
+      "start": "2026-11-08T10:00:00Z",
+      "end": "2026-11-08T11:00:00Z",
+      "price": 1.13975,
+      "type": "forecast",
+      "min": 0.86789,
+      "max": 1.60703
+    },
+    {
+      "start": "2026-11-08T11:00:00Z",
+      "end": "2026-11-08T12:00:00Z",
+      "price": 1.14019,
+      "type": "forecast",
+      "min": 0.86832,
+      "max": 1.60747
+    },
+    {
+      "start": "2026-11-08T12:00:00Z",
+      "end": "2026-11-08T13:00:00Z",
+      "price": 1.12591,
+      "type": "forecast",
+      "min": 0.85404,
+      "max": 1.59319
+    },
+    {
+      "start": "2026-11-08T13:00:00Z",
+      "end": "2026-11-08T14:00:00Z",
+      "price": 1.1838,
+      "type": "forecast",
+      "min": 0.91193,
+      "max": 1.65108
+    },
+    {
+      "start": "2026-11-08T14:00:00Z",
+      "end": "2026-11-08T15:00:00Z",
+      "price": 1.37823,
+      "type": "forecast",
+      "min": 1.10636,
+      "max": 1.84551
+    },
+    {
+      "start": "2026-11-08T15:00:00Z",
+      "end": "2026-11-08T16:00:00Z",
+      "price": 1.57452,
+      "type": "forecast",
+      "min": 1.30265,
+      "max": 2.0418
+    },
+    {
+      "start": "2026-11-08T16:00:00Z",
+      "end": "2026-11-08T17:00:00Z",
+      "price": 1.64581,
+      "type": "forecast",
+      "min": 1.37394,
+      "max": 2.11309
+    },
+    {
+      "start": "2026-11-08T17:00:00Z",
+      "end": "2026-11-08T18:00:00Z",
+      "price": 1.69842,
+      "type": "forecast",
+      "min": 1.42656,
+      "max": 2.1657
+    },
+    {
+      "start": "2026-11-08T18:00:00Z",
+      "end": "2026-11-08T19:00:00Z",
+      "price": 1.58704,
+      "type": "forecast",
+      "min": 1.31517,
+      "max": 2.05432
+    },
+    {
+      "start": "2026-11-08T19:00:00Z",
+      "end": "2026-11-08T20:00:00Z",
+      "price": 1.57825,
+      "type": "forecast",
+      "min": 1.30639,
+      "max": 2.04553
+    },
+    {
+      "start": "2026-11-08T20:00:00Z",
+      "end": "2026-11-08T21:00:00Z",
+      "price": 1.41151,
+      "type": "forecast",
+      "min": 1.13964,
+      "max": 1.87879
+    },
+    {
+      "start": "2026-11-08T21:00:00Z",
+      "end": "2026-11-08T22:00:00Z",
+      "price": 1.19852,
+      "type": "forecast",
+      "min": 0.92665,
+      "max": 1.6658
+    },
+    {
+      "start": "2026-11-08T22:00:00Z",
+      "end": "2026-11-08T23:00:00Z",
+      "price": 1.06198,
+      "type": "forecast",
+      "min": 0.79012,
+      "max": 1.52926
+    },
+    {
+      "start": "2026-11-08T23:00:00Z",
+      "end": "2026-11-09T00:00:00Z",
+      "price": 1.01222,
+      "type": "forecast",
+      "min": 0.72695,
+      "max": 1.49708
+    },
+    {
+      "start": "2026-11-09T00:00:00Z",
+      "end": "2026-11-09T01:00:00Z",
+      "price": 0.99838,
+      "type": "forecast",
+      "min": 0.71311,
+      "max": 1.48324
+    },
+    {
+      "start": "2026-11-09T01:00:00Z",
+      "end": "2026-11-09T02:00:00Z",
+      "price": 0.96861,
+      "type": "forecast",
+      "min": 0.68335,
+      "max": 1.45347
+    },
+    {
+      "start": "2026-11-09T02:00:00Z",
+      "end": "2026-11-09T03:00:00Z",
+      "price": 0.98333,
+      "type": "forecast",
+      "min": 0.69806,
+      "max": 1.46819
+    },
+    {
+      "start": "2026-11-09T03:00:00Z",
+      "end": "2026-11-09T04:00:00Z",
+      "price": 0.99113,
+      "type": "forecast",
+      "min": 0.70586,
+      "max": 1.47599
+    },
+    {
+      "start": "2026-11-09T04:00:00Z",
+      "end": "2026-11-09T05:00:00Z",
+      "price": 1.19347,
+      "type": "forecast",
+      "min": 0.9082,
+      "max": 1.67832
+    },
+    {
+      "start": "2026-11-09T05:00:00Z",
+      "end": "2026-11-09T06:00:00Z",
+      "price": 1.70996,
+      "type": "forecast",
+      "min": 1.42469,
+      "max": 2.19481
+    },
+    {
+      "start": "2026-11-09T06:00:00Z",
+      "end": "2026-11-09T07:00:00Z",
+      "price": 1.66745,
+      "type": "forecast",
+      "min": 1.38218,
+      "max": 2.1523
+    },
+    {
+      "start": "2026-11-09T07:00:00Z",
+      "end": "2026-11-09T08:00:00Z",
+      "price": 1.72819,
+      "type": "forecast",
+      "min": 1.44292,
+      "max": 2.21305
+    },
+    {
+      "start": "2026-11-09T08:00:00Z",
+      "end": "2026-11-09T09:00:00Z",
+      "price": 1.65251,
+      "type": "forecast",
+      "min": 1.36724,
+      "max": 2.13736
+    },
+    {
+      "start": "2026-11-09T09:00:00Z",
+      "end": "2026-11-09T10:00:00Z",
+      "price": 1.58298,
+      "type": "forecast",
+      "min": 1.29771,
+      "max": 2.06783
+    },
+    {
+      "start": "2026-11-09T10:00:00Z",
+      "end": "2026-11-09T11:00:00Z",
+      "price": 1.49499,
+      "type": "forecast",
+      "min": 1.20972,
+      "max": 1.97985
+    },
+    {
+      "start": "2026-11-09T11:00:00Z",
+      "end": "2026-11-09T12:00:00Z",
+      "price": 1.45248,
+      "type": "forecast",
+      "min": 1.16721,
+      "max": 1.93734
+    },
+    {
+      "start": "2026-11-09T12:00:00Z",
+      "end": "2026-11-09T13:00:00Z",
+      "price": 1.42315,
+      "type": "forecast",
+      "min": 1.13788,
+      "max": 1.90801
+    },
+    {
+      "start": "2026-11-09T13:00:00Z",
+      "end": "2026-11-09T14:00:00Z",
+      "price": 1.45589,
+      "type": "forecast",
+      "min": 1.17062,
+      "max": 1.94074
+    },
+    {
+      "start": "2026-11-09T14:00:00Z",
+      "end": "2026-11-09T15:00:00Z",
+      "price": 1.58023,
+      "type": "forecast",
+      "min": 1.29496,
+      "max": 2.06509
+    },
+    {
+      "start": "2026-11-09T15:00:00Z",
+      "end": "2026-11-09T16:00:00Z",
+      "price": 1.80651,
+      "type": "forecast",
+      "min": 1.52124,
+      "max": 2.29137
+    },
+    {
+      "start": "2026-11-09T16:00:00Z",
+      "end": "2026-11-09T17:00:00Z",
+      "price": 1.89823,
+      "type": "forecast",
+      "min": 1.61296,
+      "max": 2.38309
+    },
+    {
+      "start": "2026-11-09T17:00:00Z",
+      "end": "2026-11-09T18:00:00Z",
+      "price": 1.98018,
+      "type": "forecast",
+      "min": 1.69491,
+      "max": 2.46503
+    },
+    {
+      "start": "2026-11-09T18:00:00Z",
+      "end": "2026-11-09T19:00:00Z",
+      "price": 1.84836,
+      "type": "forecast",
+      "min": 1.56309,
+      "max": 2.33322
+    },
+    {
+      "start": "2026-11-09T19:00:00Z",
+      "end": "2026-11-09T20:00:00Z",
+      "price": 1.648,
+      "type": "forecast",
+      "min": 1.36274,
+      "max": 2.13286
+    },
+    {
+      "start": "2026-11-09T20:00:00Z",
+      "end": "2026-11-09T21:00:00Z",
+      "price": 1.44721,
+      "type": "forecast",
+      "min": 1.16194,
+      "max": 1.93206
+    },
+    {
+      "start": "2026-11-09T21:00:00Z",
+      "end": "2026-11-09T22:00:00Z",
+      "price": 1.42227,
+      "type": "forecast",
+      "min": 1.13701,
+      "max": 1.90713
+    },
+    {
+      "start": "2026-11-09T22:00:00Z",
+      "end": "2026-11-09T23:00:00Z",
+      "price": 1.33484,
+      "type": "forecast",
+      "min": 1.04957,
+      "max": 1.81969
+    },
+    {
+      "start": "2026-11-09T23:00:00Z",
+      "end": "2026-11-10T00:00:00Z",
+      "price": 1.23718,
+      "type": "forecast",
+      "min": 0.94247,
+      "max": 1.75126
+    },
+    {
+      "start": "2026-11-10T00:00:00Z",
+      "end": "2026-11-10T01:00:00Z",
+      "price": 1.21543,
+      "type": "forecast",
+      "min": 0.92072,
+      "max": 1.72951
+    },
+    {
+      "start": "2026-11-10T01:00:00Z",
+      "end": "2026-11-10T02:00:00Z",
+      "price": 1.17974,
+      "type": "forecast",
+      "min": 0.88502,
+      "max": 1.69381
+    },
+    {
+      "start": "2026-11-10T02:00:00Z",
+      "end": "2026-11-10T03:00:00Z",
+      "price": 1.14799,
+      "type": "forecast",
+      "min": 0.85328,
+      "max": 1.66206
+    },
+    {
+      "start": "2026-11-10T03:00:00Z",
+      "end": "2026-11-10T04:00:00Z",
+      "price": 1.14876,
+      "type": "forecast",
+      "min": 0.85404,
+      "max": 1.66283
+    },
+    {
+      "start": "2026-11-10T04:00:00Z",
+      "end": "2026-11-10T05:00:00Z",
+      "price": 1.24279,
+      "type": "forecast",
+      "min": 0.94807,
+      "max": 1.75686
+    },
+    {
+      "start": "2026-11-10T05:00:00Z",
+      "end": "2026-11-10T06:00:00Z",
+      "price": 1.56947,
+      "type": "forecast",
+      "min": 1.27475,
+      "max": 2.08354
+    },
+    {
+      "start": "2026-11-10T06:00:00Z",
+      "end": "2026-11-10T07:00:00Z",
+      "price": 1.81991,
+      "type": "forecast",
+      "min": 1.5252,
+      "max": 2.33399
+    },
+    {
+      "start": "2026-11-10T07:00:00Z",
+      "end": "2026-11-10T08:00:00Z",
+      "price": 1.90065,
+      "type": "forecast",
+      "min": 1.60593,
+      "max": 2.41472
+    },
+    {
+      "start": "2026-11-10T08:00:00Z",
+      "end": "2026-11-10T09:00:00Z",
+      "price": 1.82299,
+      "type": "forecast",
+      "min": 1.52827,
+      "max": 2.33706
+    },
+    {
+      "start": "2026-11-10T09:00:00Z",
+      "end": "2026-11-10T10:00:00Z",
+      "price": 1.66415,
+      "type": "forecast",
+      "min": 1.36944,
+      "max": 2.17823
+    },
+    {
+      "start": "2026-11-10T10:00:00Z",
+      "end": "2026-11-10T11:00:00Z",
+      "price": 1.57891,
+      "type": "forecast",
+      "min": 1.2842,
+      "max": 2.09299
+    },
+    {
+      "start": "2026-11-10T11:00:00Z",
+      "end": "2026-11-10T12:00:00Z",
+      "price": 1.52432,
+      "type": "forecast",
+      "min": 1.2296,
+      "max": 2.03839
+    },
+    {
+      "start": "2026-11-10T12:00:00Z",
+      "end": "2026-11-10T13:00:00Z",
+      "price": 1.56892,
+      "type": "forecast",
+      "min": 1.2742,
+      "max": 2.08299
+    },
+    {
+      "start": "2026-11-10T13:00:00Z",
+      "end": "2026-11-10T14:00:00Z",
+      "price": 1.58078,
+      "type": "forecast",
+      "min": 1.28607,
+      "max": 2.09485
+    },
+    {
+      "start": "2026-11-10T14:00:00Z",
+      "end": "2026-11-10T15:00:00Z",
+      "price": 1.78652,
+      "type": "forecast",
+      "min": 1.4918,
+      "max": 2.30059
+    },
+    {
+      "start": "2026-11-10T15:00:00Z",
+      "end": "2026-11-10T16:00:00Z",
+      "price": 1.82683,
+      "type": "forecast",
+      "min": 1.53212,
+      "max": 2.34091
+    },
+    {
+      "start": "2026-11-10T16:00:00Z",
+      "end": "2026-11-10T17:00:00Z",
+      "price": 1.84979,
+      "type": "forecast",
+      "min": 1.55508,
+      "max": 2.36386
+    },
+    {
+      "start": "2026-11-10T17:00:00Z",
+      "end": "2026-11-10T18:00:00Z",
+      "price": 1.87582,
+      "type": "forecast",
+      "min": 1.58111,
+      "max": 2.3899
+    },
+    {
+      "start": "2026-11-10T18:00:00Z",
+      "end": "2026-11-10T19:00:00Z",
+      "price": 1.74423,
+      "type": "forecast",
+      "min": 1.44951,
+      "max": 2.2583
+    },
+    {
+      "start": "2026-11-10T19:00:00Z",
+      "end": "2026-11-10T20:00:00Z",
+      "price": 1.42579,
+      "type": "forecast",
+      "min": 1.13107,
+      "max": 1.93986
+    },
+    {
+      "start": "2026-11-10T20:00:00Z",
+      "end": "2026-11-10T21:00:00Z",
+      "price": 1.21203,
+      "type": "forecast",
+      "min": 0.91732,
+      "max": 1.7261
+    },
+    {
+      "start": "2026-11-10T21:00:00Z",
+      "end": "2026-11-10T22:00:00Z",
+      "price": 0.98948,
+      "type": "forecast",
+      "min": 0.69477,
+      "max": 1.50356
+    },
+    {
+      "start": "2026-11-10T22:00:00Z",
+      "end": "2026-11-10T23:00:00Z",
+      "price": 0.78451,
+      "type": "forecast",
+      "min": 0.4898,
+      "max": 1.29859
+    },
+    {
+      "start": "2026-11-10T23:00:00Z",
+      "end": "2026-11-11T00:00:00Z",
+      "price": 0.90512,
+      "type": "forecast",
+      "min": 0.60426,
+      "max": 1.42227
+    },
+    {
+      "start": "2026-11-11T00:00:00Z",
+      "end": "2026-11-11T01:00:00Z",
+      "price": 0.86547,
+      "type": "forecast",
+      "min": 0.5646,
+      "max": 1.38262
+    },
+    {
+      "start": "2026-11-11T01:00:00Z",
+      "end": "2026-11-11T02:00:00Z",
+      "price": 0.88612,
+      "type": "forecast",
+      "min": 0.58525,
+      "max": 1.40327
+    },
+    {
+      "start": "2026-11-11T02:00:00Z",
+      "end": "2026-11-11T03:00:00Z",
+      "price": 0.85372,
+      "type": "forecast",
+      "min": 0.55285,
+      "max": 1.37087
+    },
+    {
+      "start": "2026-11-11T03:00:00Z",
+      "end": "2026-11-11T04:00:00Z",
+      "price": 0.97015,
+      "type": "forecast",
+      "min": 0.66929,
+      "max": 1.4873
+    },
+    {
+      "start": "2026-11-11T04:00:00Z",
+      "end": "2026-11-11T05:00:00Z",
+      "price": 1.11592,
+      "type": "forecast",
+      "min": 0.81505,
+      "max": 1.63307
+    },
+    {
+      "start": "2026-11-11T05:00:00Z",
+      "end": "2026-11-11T06:00:00Z",
+      "price": 1.39272,
+      "type": "forecast",
+      "min": 1.09186,
+      "max": 1.90988
+    },
+    {
+      "start": "2026-11-11T06:00:00Z",
+      "end": "2026-11-11T07:00:00Z",
+      "price": 1.56903,
+      "type": "forecast",
+      "min": 1.26816,
+      "max": 2.08618
+    },
+    {
+      "start": "2026-11-11T07:00:00Z",
+      "end": "2026-11-11T08:00:00Z",
+      "price": 1.60747,
+      "type": "forecast",
+      "min": 1.30661,
+      "max": 2.12462
+    },
+    {
+      "start": "2026-11-11T08:00:00Z",
+      "end": "2026-11-11T09:00:00Z",
+      "price": 1.57386,
+      "type": "forecast",
+      "min": 1.27299,
+      "max": 2.09101
+    },
+    {
+      "start": "2026-11-11T09:00:00Z",
+      "end": "2026-11-11T10:00:00Z",
+      "price": 1.4717,
+      "type": "forecast",
+      "min": 1.17084,
+      "max": 1.98885
+    },
+    {
+      "start": "2026-11-11T10:00:00Z",
+      "end": "2026-11-11T11:00:00Z",
+      "price": 1.4694,
+      "type": "forecast",
+      "min": 1.16853,
+      "max": 1.98655
+    },
+    {
+      "start": "2026-11-11T11:00:00Z",
+      "end": "2026-11-11T12:00:00Z",
+      "price": 1.46379,
+      "type": "forecast",
+      "min": 1.16293,
+      "max": 1.98094
+    },
+    {
+      "start": "2026-11-11T12:00:00Z",
+      "end": "2026-11-11T13:00:00Z",
+      "price": 1.48346,
+      "type": "forecast",
+      "min": 1.18259,
+      "max": 2.00061
+    },
+    {
+      "start": "2026-11-11T13:00:00Z",
+      "end": "2026-11-11T14:00:00Z",
+      "price": 1.62779,
+      "type": "forecast",
+      "min": 1.32693,
+      "max": 2.14494
+    },
+    {
+      "start": "2026-11-11T14:00:00Z",
+      "end": "2026-11-11T15:00:00Z",
+      "price": 1.75664,
+      "type": "forecast",
+      "min": 1.45578,
+      "max": 2.27379
+    },
+    {
+      "start": "2026-11-11T15:00:00Z",
+      "end": "2026-11-11T16:00:00Z",
+      "price": 1.92163,
+      "type": "forecast",
+      "min": 1.62076,
+      "max": 2.43878
+    },
+    {
+      "start": "2026-11-11T16:00:00Z",
+      "end": "2026-11-11T17:00:00Z",
+      "price": 1.9224,
+      "type": "forecast",
+      "min": 1.62153,
+      "max": 2.43955
+    },
+    {
+      "start": "2026-11-11T17:00:00Z",
+      "end": "2026-11-11T18:00:00Z",
+      "price": 1.90361,
+      "type": "forecast",
+      "min": 1.60275,
+      "max": 2.42076
+    },
+    {
+      "start": "2026-11-11T18:00:00Z",
+      "end": "2026-11-11T19:00:00Z",
+      "price": 1.81123,
+      "type": "forecast",
+      "min": 1.51037,
+      "max": 2.32838
+    },
+    {
+      "start": "2026-11-11T19:00:00Z",
+      "end": "2026-11-11T20:00:00Z",
+      "price": 1.58517,
+      "type": "forecast",
+      "min": 1.28431,
+      "max": 2.10232
+    },
+    {
+      "start": "2026-11-11T20:00:00Z",
+      "end": "2026-11-11T21:00:00Z",
+      "price": 1.42106,
+      "type": "forecast",
+      "min": 1.1202,
+      "max": 1.93822
+    },
+    {
+      "start": "2026-11-11T21:00:00Z",
+      "end": "2026-11-11T22:00:00Z",
+      "price": 1.3132,
+      "type": "forecast",
+      "min": 1.01233,
+      "max": 1.83035
+    },
+    {
+      "start": "2026-11-11T22:00:00Z",
+      "end": "2026-11-11T23:00:00Z",
+      "price": 1.13206,
+      "type": "forecast",
+      "min": 0.8312,
+      "max": 1.64921
+    },
+    {
+      "start": "2026-11-11T23:00:00Z",
+      "end": "2026-11-12T00:00:00Z",
+      "price": 0.88151,
+      "type": "forecast",
+      "min": 0.55417,
+      "max": 1.39437
+    },
+    {
+      "start": "2026-11-12T00:00:00Z",
+      "end": "2026-11-12T01:00:00Z",
+      "price": 0.8424,
+      "type": "forecast",
+      "min": 0.51506,
+      "max": 1.35527
+    },
+    {
+      "start": "2026-11-12T01:00:00Z",
+      "end": "2026-11-12T02:00:00Z",
+      "price": 0.79769,
+      "type": "forecast",
+      "min": 0.47036,
+      "max": 1.31056
+    },
+    {
+      "start": "2026-11-12T02:00:00Z",
+      "end": "2026-11-12T03:00:00Z",
+      "price": 0.78858,
+      "type": "forecast",
+      "min": 0.46124,
+      "max": 1.30144
+    },
+    {
+      "start": "2026-11-12T03:00:00Z",
+      "end": "2026-11-12T04:00:00Z",
+      "price": 0.79429,
+      "type": "forecast",
+      "min": 0.46695,
+      "max": 1.30716
+    },
+    {
+      "start": "2026-11-12T04:00:00Z",
+      "end": "2026-11-12T05:00:00Z",
+      "price": 0.83548,
+      "type": "forecast",
+      "min": 0.50814,
+      "max": 1.34835
+    },
+    {
+      "start": "2026-11-12T05:00:00Z",
+      "end": "2026-11-12T06:00:00Z",
+      "price": 1.16732,
+      "type": "forecast",
+      "min": 0.83998,
+      "max": 1.68019
+    },
+    {
+      "start": "2026-11-12T06:00:00Z",
+      "end": "2026-11-12T07:00:00Z",
+      "price": 1.44248,
+      "type": "forecast",
+      "min": 1.11515,
+      "max": 1.95535
+    },
+    {
+      "start": "2026-11-12T07:00:00Z",
+      "end": "2026-11-12T08:00:00Z",
+      "price": 1.51718,
+      "type": "forecast",
+      "min": 1.18984,
+      "max": 2.03005
+    },
+    {
+      "start": "2026-11-12T08:00:00Z",
+      "end": "2026-11-12T09:00:00Z",
+      "price": 1.29639,
+      "type": "forecast",
+      "min": 0.96905,
+      "max": 1.80926
+    },
+    {
+      "start": "2026-11-12T09:00:00Z",
+      "end": "2026-11-12T10:00:00Z",
+      "price": 1.21752,
+      "type": "forecast",
+      "min": 0.89018,
+      "max": 1.73039
+    },
+    {
+      "start": "2026-11-12T10:00:00Z",
+      "end": "2026-11-12T11:00:00Z",
+      "price": 0.97411,
+      "type": "forecast",
+      "min": 0.64677,
+      "max": 1.48697
+    },
+    {
+      "start": "2026-11-12T11:00:00Z",
+      "end": "2026-11-12T12:00:00Z",
+      "price": 0.92039,
+      "type": "forecast",
+      "min": 0.59305,
+      "max": 1.43326
+    },
+    {
+      "start": "2026-11-12T12:00:00Z",
+      "end": "2026-11-12T13:00:00Z",
+      "price": 0.91885,
+      "type": "forecast",
+      "min": 0.59152,
+      "max": 1.43172
+    },
+    {
+      "start": "2026-11-12T13:00:00Z",
+      "end": "2026-11-12T14:00:00Z",
+      "price": 1.05396,
+      "type": "forecast",
+      "min": 0.72662,
+      "max": 1.56683
+    },
+    {
+      "start": "2026-11-12T14:00:00Z",
+      "end": "2026-11-12T15:00:00Z",
+      "price": 1.28848,
+      "type": "forecast",
+      "min": 0.96114,
+      "max": 1.80135
+    },
+    {
+      "start": "2026-11-12T15:00:00Z",
+      "end": "2026-11-12T16:00:00Z",
+      "price": 1.40426,
+      "type": "forecast",
+      "min": 1.07692,
+      "max": 1.91712
+    },
+    {
+      "start": "2026-11-12T16:00:00Z",
+      "end": "2026-11-12T17:00:00Z",
+      "price": 1.65569,
+      "type": "forecast",
+      "min": 1.32836,
+      "max": 2.16856
+    },
+    {
+      "start": "2026-11-12T17:00:00Z",
+      "end": "2026-11-12T18:00:00Z",
+      "price": 1.42216,
+      "type": "forecast",
+      "min": 1.09483,
+      "max": 1.93503
+    },
+    {
+      "start": "2026-11-12T18:00:00Z",
+      "end": "2026-11-12T19:00:00Z",
+      "price": 1.30386,
+      "type": "forecast",
+      "min": 0.97652,
+      "max": 1.81673
+    },
+    {
+      "start": "2026-11-12T19:00:00Z",
+      "end": "2026-11-12T20:00:00Z",
+      "price": 1.14832,
+      "type": "forecast",
+      "min": 0.82098,
+      "max": 1.66119
+    },
+    {
+      "start": "2026-11-12T20:00:00Z",
+      "end": "2026-11-12T21:00:00Z",
+      "price": 0.97718,
+      "type": "forecast",
+      "min": 0.64984,
+      "max": 1.49005
+    },
+    {
+      "start": "2026-11-12T21:00:00Z",
+      "end": "2026-11-12T22:00:00Z",
+      "price": 0.84471,
+      "type": "forecast",
+      "min": 0.51737,
+      "max": 1.35757
+    },
+    {
+      "start": "2026-11-12T22:00:00Z",
+      "end": "2026-11-12T23:00:00Z",
+      "price": 0.65545,
+      "type": "forecast",
+      "min": 0.32811,
+      "max": 1.16831
+    },
+    {
+      "start": "2026-11-12T23:00:00Z",
+      "end": "2026-11-13T00:00:00Z",
+      "price": 0.78298,
+      "type": "forecast",
+      "min": 0.45575,
+      "max": 1.2965
+    },
+    {
+      "start": "2026-11-13T00:00:00Z",
+      "end": "2026-11-13T01:00:00Z",
+      "price": 0.75321,
+      "type": "forecast",
+      "min": 0.42598,
+      "max": 1.26673
+    },
+    {
+      "start": "2026-11-13T01:00:00Z",
+      "end": "2026-11-13T02:00:00Z",
+      "price": 0.73607,
+      "type": "forecast",
+      "min": 0.40884,
+      "max": 1.2496
+    },
+    {
+      "start": "2026-11-13T02:00:00Z",
+      "end": "2026-11-13T03:00:00Z",
+      "price": 0.73838,
+      "type": "forecast",
+      "min": 0.41115,
+      "max": 1.2519
+    },
+    {
+      "start": "2026-11-13T03:00:00Z",
+      "end": "2026-11-13T04:00:00Z",
+      "price": 0.83746,
+      "type": "forecast",
+      "min": 0.51023,
+      "max": 1.35098
+    },
+    {
+      "start": "2026-11-13T04:00:00Z",
+      "end": "2026-11-13T05:00:00Z",
+      "price": 0.99618,
+      "type": "forecast",
+      "min": 0.66896,
+      "max": 1.50971
+    },
+    {
+      "start": "2026-11-13T05:00:00Z",
+      "end": "2026-11-13T06:00:00Z",
+      "price": 1.39855,
+      "type": "forecast",
+      "min": 1.07132,
+      "max": 1.91207
+    },
+    {
+      "start": "2026-11-13T06:00:00Z",
+      "end": "2026-11-13T07:00:00Z",
+      "price": 1.77938,
+      "type": "forecast",
+      "min": 1.45215,
+      "max": 2.2929
+    },
+    {
+      "start": "2026-11-13T07:00:00Z",
+      "end": "2026-11-13T08:00:00Z",
+      "price": 1.94272,
+      "type": "forecast",
+      "min": 1.61549,
+      "max": 2.45624
+    },
+    {
+      "start": "2026-11-13T08:00:00Z",
+      "end": "2026-11-13T09:00:00Z",
+      "price": 1.83123,
+      "type": "forecast",
+      "min": 1.504,
+      "max": 2.34475
+    },
+    {
+      "start": "2026-11-13T09:00:00Z",
+      "end": "2026-11-13T10:00:00Z",
+      "price": 1.64735,
+      "type": "forecast",
+      "min": 1.32012,
+      "max": 2.16087
+    },
+    {
+      "start": "2026-11-13T10:00:00Z",
+      "end": "2026-11-13T11:00:00Z",
+      "price": 1.54299,
+      "type": "forecast",
+      "min": 1.21576,
+      "max": 2.05652
+    },
+    {
+      "start": "2026-11-13T11:00:00Z",
+      "end": "2026-11-13T12:00:00Z",
+      "price": 1.49927,
+      "type": "forecast",
+      "min": 1.17205,
+      "max": 2.0128
+    },
+    {
+      "start": "2026-11-13T12:00:00Z",
+      "end": "2026-11-13T13:00:00Z",
+      "price": 1.43502,
+      "type": "forecast",
+      "min": 1.10779,
+      "max": 1.94854
+    },
+    {
+      "start": "2026-11-13T13:00:00Z",
+      "end": "2026-11-13T14:00:00Z",
+      "price": 1.47335,
+      "type": "forecast",
+      "min": 1.14612,
+      "max": 1.98688
+    },
+    {
+      "start": "2026-11-13T14:00:00Z",
+      "end": "2026-11-13T15:00:00Z",
+      "price": 1.69864,
+      "type": "forecast",
+      "min": 1.37141,
+      "max": 2.21217
+    },
+    {
+      "start": "2026-11-13T15:00:00Z",
+      "end": "2026-11-13T16:00:00Z",
+      "price": 1.8823,
+      "type": "forecast",
+      "min": 1.55508,
+      "max": 2.39583
+    },
+    {
+      "start": "2026-11-13T16:00:00Z",
+      "end": "2026-11-13T17:00:00Z",
+      "price": 1.93327,
+      "type": "forecast",
+      "min": 1.60604,
+      "max": 2.4468
+    },
+    {
+      "start": "2026-11-13T17:00:00Z",
+      "end": "2026-11-13T18:00:00Z",
+      "price": 1.91284,
+      "type": "forecast",
+      "min": 1.58561,
+      "max": 2.42637
+    },
+    {
+      "start": "2026-11-13T18:00:00Z",
+      "end": "2026-11-13T19:00:00Z",
+      "price": 1.59209,
+      "type": "forecast",
+      "min": 1.26487,
+      "max": 2.10562
+    },
+    {
+      "start": "2026-11-13T19:00:00Z",
+      "end": "2026-11-13T20:00:00Z",
+      "price": 1.49159,
+      "type": "forecast",
+      "min": 1.16436,
+      "max": 2.00511
+    },
+    {
+      "start": "2026-11-13T20:00:00Z",
+      "end": "2026-11-13T21:00:00Z",
+      "price": 1.40799,
+      "type": "forecast",
+      "min": 1.08076,
+      "max": 1.92152
+    },
+    {
+      "start": "2026-11-13T21:00:00Z",
+      "end": "2026-11-13T22:00:00Z",
+      "price": 1.30507,
+      "type": "forecast",
+      "min": 0.97784,
+      "max": 1.81859
+    },
+    {
+      "start": "2026-11-13T22:00:00Z",
+      "end": "2026-11-13T23:00:00Z",
+      "price": 1.15227,
+      "type": "forecast",
+      "min": 0.82505,
+      "max": 1.6658
     }
-  ],
-  "zoneInfo": {
-    "name": "SE3 Stockholm",
-    "country": "SE",
-    "currency": "SEK",
-    "rate": 10.9475,
-    "rateDate": "2026-11-02",
-    "rateSource": "ECB"
-  }
+  ]
 }

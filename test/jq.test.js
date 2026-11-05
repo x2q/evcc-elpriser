@@ -1,154 +1,73 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { fixture, zones, runJq, program, localParts, dayLength } from './helpers.js';
+import { readFileSync, readdirSync } from 'node:fs';
+import { join } from 'node:path';
+import { fixture, root, runJq, program, minutes } from './helpers.js';
 
-const tzOf = Object.fromEntries(zones.map((z) => [z.key, z.tz]));
+// Recorded live answers of https://elpriser.org/api/slots (test/fixtures/*.json).
+const FIXTURES = ['de', 'es', 'dk1_inkl_alt', 'dk2_net', 'se3', 'xk', 'gb'];
 
-function checkSlots(slots, tz) {
-  assert.ok(slots.length > 0);
-  for (let i = 0; i < slots.length; i++) {
-    const s = slots[i];
-    assert.equal(Date.parse(s.end) - Date.parse(s.start), 3600000, 'one hour per slot');
-    assert.match(s.start, /^\d{4}-\d\d-\d\dT\d\d:00:00Z$/);
-    if (i) assert.ok(Date.parse(s.start) >= Date.parse(slots[i - 1].end), 'slots are in order, no overlap');
-    assert.equal(typeof s.value, 'number');
+function checkRates(rates, input) {
+  assert.ok(rates.length > 0);
+  assert.equal(rates.length, input.slots.length, 'one rate per slot, none added or dropped');
+  for (let i = 0; i < rates.length; i++) {
+    const r = rates[i], s = input.slots[i];
+    assert.deepEqual(Object.keys(r).sort(), ['end', 'start', 'value'], 'exactly what evcc reads');
+    assert.equal(r.start, s.start);
+    assert.equal(r.end, s.end);
+    assert.equal(r.value, s.price, 'value = price, currency per kWh, as the service delivers it');
+    assert.match(r.start, /^\d{4}-\d\d-\d\dT\d\d:\d\d:00Z$/, 'UTC timestamps');
+    assert.ok([15, 30, 60].includes(minutes(r)), `slot of ${minutes(r)} minutes`);
+    assert.equal(typeof r.value, 'number');
+    if (i) assert.ok(Date.parse(r.start) >= Date.parse(rates[i - 1].end), 'in order, no overlap');
   }
 }
 
-// --- recorded live responses ------------------------------------------------------------
-
-for (const [file, zone] of [['de', 'de'], ['pl', 'pl'], ['se3', 'se3'], ['gb', 'gb']]) {
-  test(`nordic response ${file}: every priced hour lands on the right instant, in local currency`, () => {
-    const r = fixture(file);
-    const slots = runJq(program({ local: true }), r);
-    checkSlots(slots, tzOf[zone]);
-    const expected = new Map();
-    for (const d of r.days)
-      for (const p of d.prices)
-        if (p.eur_mwh != null) expected.set(`${d.date}|${p.hour}`, Math.round(((p.eur_mwh * r.zoneInfo.rate) / 1000) * 1e5) / 1e5);
-    assert.equal(slots.length, expected.size, 'one slot per priced hour (no DST change in the recorded days)');
-    for (const s of slots) {
-      const l = localParts(s.start, tzOf[zone]);
-      assert.equal(s.value, expected.get(`${l.date}|${l.hour}`), `${s.start}`);
-    }
+for (const name of FIXTURES) {
+  test(`recorded answer ${name}: every slot becomes one rate on the same instants`, () => {
+    const input = fixture(name);
+    checkRates(runJq(program(), input), input);
   });
 }
 
-test('EUR instead of local currency: the zone rate is not applied', () => {
-  const r = fixture('pl');
-  assert.ok(r.zoneInfo.rate > 1);
-  const local = runJq(program({ local: true }), r);
-  const eur = runJq(program({ local: false }), r);
-  assert.equal(local.length, eur.length);
-  for (let i = 0; i < eur.length; i++) {
-    assert.ok(Math.abs(local[i].value - eur[i].value * r.zoneInfo.rate) < 2e-5);
-  }
-  const first = r.days[0].prices[0].eur_mwh;
-  assert.equal(eur[0].value, Math.round((first / 1000) * 1e5) / 1e5);
-});
-
-test('GB: hours without a price are left out, the unit stays GBP (rate 1)', () => {
-  const r = fixture('gb');
-  const nulls = r.days.flatMap((d) => d.prices).filter((p) => p.eur_mwh == null).length;
-  assert.ok(nulls > 0, 'fixture has unpriced hours');
-  const total = r.days.reduce((n, d) => n + d.prices.length, 0);
-  assert.equal(runJq(program(), r).length, total - nulls);
-});
-
-test('actual_only drops the model forecast days', () => {
-  const r = fixture('de');
-  const all = runJq(program({ actualOnly: false }), r);
-  const actual = runJq(program({ actualOnly: true }), r);
-  const nActual = r.days.filter((d) => d.type === 'actual').length * 24;
-  assert.equal(actual.length, nActual);
-  assert.ok(all.length > actual.length);
-});
-
-test('Denmark: /api/forecast price is passed through in DKK/kWh', () => {
-  for (const f of ['dk1_fc', 'dk2_net']) {
-    const r = fixture(f);
-    const slots = runJq(program(), r);
-    checkSlots(slots, 'Europe/Copenhagen');
-    const prices = new Map(r.days.flatMap((d) => d.prices.map((p) => [`${d.date}|${p.hour}`, p.price])));
-    for (const s of slots) {
-      const l = localParts(s.start, 'Europe/Copenhagen');
-      assert.equal(s.value, Math.round(prices.get(`${l.date}|${l.hour}`) * 1e5) / 1e5);
-    }
-    assert.equal(slots.length, r.days.length * 24);
+test('Germany and Spain: the settled days are 15-minute slots, the model days hourly', () => {
+  for (const name of ['de', 'es']) {
+    const rates = runJq(program(), fixture(name));
+    const input = fixture(name);
+    const settled = input.slots.map((s, i) => [s, rates[i]]).filter(([s]) => s.type === 'actual');
+    assert.ok(settled.length >= 192, `${name}: two settled days or more`);
+    assert.ok(settled.every(([, r]) => minutes(r) === 15), `${name}: 15 minutes`);
+    assert.ok(input.slots.filter((s) => s.type === 'forecast').every((s) => minutes(s) === 60), `${name}: forecast days hourly`);
   }
 });
 
-// --- Finland is on Helsinki's clock ------------------------------------------------------
-
-test('fi: hour 0 of a Finnish day is 22:00 UTC in winter (ENTSO-E: the 2026-11-03 market day starts at 23:00Z = hour 1), 21:00 UTC in summer', () => {
-  const day = (date) => ({ date, type: 'actual', prices: Array.from({ length: 24 }, (_, hour) => ({ hour, eur_mwh: hour === 1 ? 5.77 : hour })) });
-  const payload = { zone: 'fi', zoneInfo: { currency: 'EUR', rate: 1 }, unit: 'EUR/MWh', days: [day('2026-11-03'), day('2026-07-15')] };
-  const slots = runJq(program({ local: true }), payload);
-  const winter = slots.filter((s) => localParts(s.start, 'Europe/Helsinki').date === '2026-11-03');
-  assert.equal(winter.length, 24);
-  assert.equal(winter[0].start, '2026-11-02T22:00:00Z');
-  assert.equal(winter[1].start, '2026-11-02T23:00:00Z');
-  assert.equal(winter[1].value, 0.00577, 'the first market hour: 5.77 EUR/MWh');
-  assert.equal(winter[23].end, '2026-11-03T22:00:00Z');
-  const summer = slots.filter((s) => localParts(s.start, 'Europe/Helsinki').date === '2026-07-15');
-  assert.equal(summer[0].start, '2026-07-14T21:00:00Z');
-});
-
-// --- daylight saving: every zone, 2025-2030 --------------------------------------------
-
-function sweepPayload(zone, years) {
-  const days = [];
-  const start = Date.parse(`${years[0]}-01-01T00:00:00Z`);
-  const end = Date.parse(`${years[1]}-12-31T00:00:00Z`);
-  let n = 0;
-  for (let t = start; t <= end; t += 86400000) {
-    const date = new Date(t).toISOString().slice(0, 10);
-    const md = date.slice(5);
-    // the weeks around both clock changes (last Sunday of March / October) plus a winter and a summer day
-    const near = (md >= '03-22' && md <= '04-02') || (md >= '10-22' && md <= '11-02') || md === '01-15' || md === '07-15';
-    if (!near) continue;
-    n++;
-    // the price encodes (day number, hour), so the check does not depend on the program under test
-    days.push({ date, type: 'actual', prices: Array.from({ length: 24 }, (_, hour) => ({ hour, eur_mwh: (n - 1) * 100 + hour })) });
-  }
-  return { zone, zoneInfo: { currency: 'EUR', rate: 1 }, unit: 'EUR/MWh', days };
-}
-
-test('daylight saving, all 40 zones 2025-2030: 23/24/25-hour days and the hour of every slot', () => {
-  for (const z of zones) {
-    const payload = sweepPayload(z.key, [2025, 2030]);
-    const slots = runJq(program(), payload);
-    const byDate = new Map();
-    for (const s of slots) {
-      const l = localParts(s.start, z.tz);
-      const day = payload.days.find((d) => d.date === l.date);
-      assert.ok(day, `${z.key} ${s.start} falls outside the requested days`);
-      const idx = payload.days.indexOf(day);
-      // value is eur_mwh/1000, rounded to 5 decimals: n*100+hour in MWh -> kWh
-      assert.equal(Math.round(s.value * 1000), idx * 100 + l.hour, `${z.key} ${s.start}`);
-      byDate.set(l.date, (byDate.get(l.date) || 0) + 1);
-    }
-    for (const d of payload.days) {
-      assert.equal(byDate.get(d.date), dayLength(d.date, z.tz), `${z.key} ${d.date}: slots in the day`);
-    }
+test('Denmark: the settled days are 15-minute slots in DKK/kWh, the forecast days hourly', () => {
+  for (const name of ['dk1_inkl_alt', 'dk2_net']) {
+    const input = fixture(name);
+    assert.equal(input.currency, 'DKK');
+    const rates = runJq(program(), input);
+    assert.ok(rates.filter((r, i) => input.slots[i].type === 'actual').every((r) => minutes(r) === 15), name);
   }
 });
 
-test('the doubled hour of a 25-hour day carries the same price twice (Berlin, 2026-10-25)', () => {
-  const payload = sweepPayload('de', [2026, 2026]);
-  payload.days = payload.days.filter((d) => d.date === '2026-10-25');
-  const slots = runJq(program(), payload);
-  assert.equal(slots.length, 25);
-  const twos = slots.filter((s) => Math.round(s.value * 1000) % 100 === 2);
-  assert.equal(twos.length, 2);
-  assert.equal(twos[0].value, twos[1].value);
-  assert.deepEqual(slots.map((s) => s.start).slice(0, 2), ['2026-10-24T22:00:00Z', '2026-10-24T23:00:00Z']);
+test('hourly sources stay hourly (Kosovo) and half-hourly ones are not cut up (Great Britain)', () => {
+  assert.ok(runJq(program(), fixture('xk')).every((r) => minutes(r) === 60));
+  assert.ok(runJq(program(), fixture('gb')).every((r) => minutes(r) >= 30));
 });
 
-test('the missing hour of a 23-hour day is absent (Berlin, 2026-03-29)', () => {
-  const payload = sweepPayload('de', [2026, 2026]);
-  payload.days = payload.days.filter((d) => d.date === '2026-03-29');
-  const slots = runJq(program(), payload);
-  assert.equal(slots.length, 23);
-  assert.ok(!slots.some((s) => Math.round(s.value * 1000) % 100 === 2));
+test('the jq program is the whole logic: no time zone arithmetic left in it', () => {
+  const code = program().split('\n').filter((l) => !l.trim().startsWith('#')).join('\n');
+  assert.ok(!/fromdate|mktime|gmtime|strptime|dst/i.test(code), code);
+});
+
+test('every example reads /api/slots and carries exactly this program', () => {
+  const code = program().trimEnd();
+  const files = readdirSync(join(root, 'examples')).filter((f) => f.endsWith('.yaml'));
+  assert.ok(files.length >= 5);
+  for (const f of files) {
+    const yaml = readFileSync(join(root, 'examples', f), 'utf8');
+    assert.match(yaml, /uri: https:\/\/elpriser\.org\/api\/slots\?zone=[a-z0-9-]+/, f);
+    assert.ok(!/api\/(nordic|forecast)/.test(yaml.replace(/^#.*$/gm, '')), `${f} still reads an hourly endpoint`);
+    for (const line of code.split('\n')) assert.ok(yaml.includes(line.trimEnd()), `${f} lacks the program line: ${line}`);
+  }
 });

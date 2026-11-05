@@ -20,41 +20,8 @@ export function runJq(program, input) {
   return JSON.parse(out);
 }
 
-export function program({ local = true, actualOnly = false } = {}) {
-  return readFileSync(join(root, 'src/elpriser.jq'), 'utf8')
-    .replace('__LOCAL_CURRENCY__', String(local))
-    .replace('__ACTUAL_ONLY__', String(actualOnly));
-}
+/** The program every example and the template use. */
+export const program = () => readFileSync(join(root, 'src/elpriser.jq'), 'utf8');
 
-const fmt = new Map();
-/** Local calendar date (YYYY-MM-DD) and hour (0-23) of a UTC instant in an IANA zone. */
-export function localParts(iso, tz) {
-  if (!fmt.has(tz)) {
-    fmt.set(
-      tz,
-      new Intl.DateTimeFormat('en-GB', {
-        timeZone: tz, hourCycle: 'h23', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit',
-      }),
-    );
-  }
-  const p = Object.fromEntries(fmt.get(tz).formatToParts(new Date(iso)).map((x) => [x.type, x.value]));
-  return { date: `${p.year}-${p.month}-${p.day}`, hour: Number(p.hour) };
-}
-
-/** Length in hours of a local calendar day (23, 24 or 25). */
-export function dayLength(date, tz) {
-  const next = new Date(Date.parse(date + 'T00:00:00Z') + 86400000).toISOString().slice(0, 10);
-  const start = firstInstant(date, tz);
-  return (firstInstant(next, tz) - start) / 3600000;
-}
-
-function firstInstant(date, tz) {
-  // local midnight lies in 21:00..03:00Z +/-; search the hour whose local date is `date` and hour is 0
-  const base = Date.parse(date + 'T00:00:00Z');
-  for (let h = -14; h <= 14; h++) {
-    const t = base + h * 3600000;
-    const p = localParts(new Date(t).toISOString(), tz);
-    if (p.date === date && p.hour === 0) return t;
-  }
-  throw new Error('no local midnight for ' + date + ' ' + tz);
-}
+/** Length of a slot in minutes. */
+export const minutes = (s) => (Date.parse(s.end) - Date.parse(s.start)) / 60000;
